@@ -126,14 +126,13 @@ class AgenticAdCopyGenerator {
                 console.log('✗ Ad group not found. Available ad groups:', window.campaignsData[campaignId].adGroups);
             }
             
-            // Get saved keywords for unit type campaigns
-            if (campaignContext.isUnitType && 
-                window.campaignsData[campaignId].keywords && 
+            // Get saved keywords for all campaign types
+            if (window.campaignsData[campaignId].keywords && 
                 window.campaignsData[campaignId].keywords[adGroupId]) {
                 savedKeywords = window.campaignsData[campaignId].keywords[adGroupId];
-                console.log('Unit type campaign detected. Using saved keywords:', savedKeywords);
-            } else if (campaignContext.isUnitType) {
-                console.log('Unit type campaign detected but no saved keywords found for adGroupId:', adGroupId);
+                console.log('Using saved keywords for ad copy generation:', savedKeywords);
+            } else {
+                console.log('No saved keywords found for adGroupId:', adGroupId);
                 console.log('Available keyword data:', window.campaignsData[campaignId].keywords);
             }
         } else {
@@ -168,8 +167,8 @@ class AgenticAdCopyGenerator {
             console.log('Final clientInfo in payload:', requestPayload.clientInfo);
             console.log('Campaign context in payload:', requestPayload.campaignContext);
             
-            // Add saved keywords for unit type campaigns
-            if (campaignContext && campaignContext.isUnitType && savedKeywords) {
+            // Add saved keywords for all campaign types
+            if (savedKeywords) {
                 requestPayload.savedKeywords = savedKeywords;
                 console.log('Added saved keywords to payload:', savedKeywords);
             }

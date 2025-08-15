@@ -307,6 +307,284 @@
         .add-keyword-btn:hover {
             background-color: #3367d6;
         }
+        
+        /* Campaign Structure Form Styles */
+        .creation-form {
+            background-color: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 6px;
+            padding: 20px;
+            margin-top: 15px;
+            transition: opacity 0.3s ease;
+        }
+        
+        .creation-form h4 {
+            margin-top: 0;
+            margin-bottom: 15px;
+            color: #4285f4;
+        }
+        
+        .form-actions {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .save-btn {
+            background-color: #34a853;
+        }
+        
+        .save-btn:hover {
+            background-color: #2d9146;
+        }
+        
+        .cancel-btn {
+            background-color: #ea4335;
+        }
+        
+        .cancel-btn:hover {
+            background-color: #d62516;
+        }
+        
+        .campaign-list-item {
+            margin-bottom: 15px;
+        }
+        
+        .campaign-header {
+            background-color: #e8f0fe;
+            padding: 12px;
+            border-radius: 6px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 5px;
+        }
+        
+        .campaign-title {
+            font-weight: bold;
+            color: #1a73e8;
+        }
+        
+        .ad-group-list {
+            margin-left: 20px;
+        }
+        
+        .ad-group-item-new {
+            background-color: #f1fff1;
+            padding: 10px;
+            margin-bottom: 5px;
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-left: 3px solid #34a853;
+        }
+        
+        /* Keyword Coverage Analysis Styles */
+        .coverage-analysis {
+            background-color: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 6px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .coverage-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .coverage-title {
+            color: #4285f4;
+            margin: 0;
+            font-size: 18px;
+        }
+        
+        .coverage-score {
+            background: linear-gradient(135deg, #4285f4, #34a853);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        
+        .coverage-content {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .coverage-chart {
+            flex: 1;
+            max-width: 400px;
+        }
+        
+        .coverage-details {
+            flex: 1;
+        }
+        
+        .coverage-metric {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .metric-label {
+            font-weight: 500;
+            color: #333;
+        }
+        
+        .metric-value {
+            font-weight: bold;
+            color: #4285f4;
+        }
+        
+        .coverage-keywords {
+            margin-top: 15px;
+        }
+        
+        .keyword-coverage-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 10px;
+            margin: 3px 0;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        
+        .keyword-covered {
+            background-color: #e8f5e9;
+            color: #2e7d32;
+        }
+        
+        .keyword-partial {
+            background-color: #fff3e0;
+            color: #ef6c00;
+        }
+        
+        .keyword-missing {
+            background-color: #ffebee;
+            color: #c62828;
+        }
+        
+        .coverage-status {
+            font-size: 12px;
+            padding: 2px 6px;
+            border-radius: 10px;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .status-covered {
+            background-color: #4caf50;
+        }
+        
+        .status-partial {
+            background-color: #ff9800;
+        }
+        
+        .status-missing {
+            background-color: #f44336;
+        }
+        
+        .refresh-analysis-btn {
+            background-color: #34a853;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        
+        .refresh-analysis-btn:hover {
+            background-color: #2d9146;
+        }
+
+        .client-selection-section {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .client-selector {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .current-client-indicator {
+            padding: 12px;
+            background-color: #e8f5e8;
+            border-left: 4px solid #34a853;
+            border-radius: 4px;
+            margin-top: 15px;
+        }
+
+        .sync-status.loading {
+            color: #fbbc04;
+        }
+
+        .sync-status.success {
+            color: #34a853;
+        }
+
+        .sync-status.error {
+            color: #ea4335;
+        }
+
+        .save-status {
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        .action-buttons {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .btn-secondary {
+            background-color: #34a853;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .btn-icon {
+            background-color: #fbbc04;
+            color: white;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .btn-save {
+            background-color: #4285f4;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .loading {
+            color: #fbbc04;
+        }
     </style>
 </head>
 <body>
@@ -325,66 +603,145 @@
             <!-- Client Information Tab -->
             <div id="client-info-tab" class="tab-content active">
                 <h2>Client Information</h2>
-                <div class="form-group">
-                    <label for="client-name">Client Name *</label>
-                    <input type="text" id="client-name" placeholder="e.g., AMLI Residential">
+                <p style="color: #666; margin-bottom: 20px;">Select an existing client or create a new one</p>
+                
+                <!-- Client Selection Section -->
+                <div class="client-selection-section" style="background-color: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+                    <div class="form-group">
+                        <label for="client-selector">Select Client</label>
+                        <div style="display: flex; gap: 10px; align-items: center;">
+                            <select id="client-selector" class="client-selector" style="flex: 1;">
+                                <option value="">-- Select an existing client --</option>
+                            </select>
+                            <button type="button" id="new-client-btn" class="btn" style="background-color: #34a853; color: white; padding: 8px 16px; border: none; border-radius: 4px; cursor: pointer;">New Client</button>
+                            <button type="button" id="refresh-clients-btn" class="btn" style="background-color: #fbbc04; color: white; padding: 8px 12px; border: none; border-radius: 4px; cursor: pointer;" title="Refresh client list">🔄</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Current Client Indicator -->
+                    <div id="current-client-indicator" class="current-client-indicator" style="display: none; padding: 12px; background-color: #e8f5e8; border-left: 4px solid #34a853; border-radius: 4px; margin-top: 15px;">
+                        <span style="font-weight: bold;">👤 Working with: </span>
+                        <span id="current-client-name" style="color: #2e7d32;"></span>
+                        <span id="sync-status" style="margin-left: 10px; font-size: 12px;"></span>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="website-url">Website URL *</label>
-                    <input type="url" id="website-url" placeholder="e.g., https://www.example.com">
+                
+                <!-- Client Information Form -->
+                <div class="client-form-section">
+                    <div class="form-group">
+                        <label for="client-name">Client Name *</label>
+                        <input type="text" id="client-name" placeholder="e.g., AMLI Residential">
+                    </div>
+                    <div class="form-group">
+                        <label for="website-url">Website URL *</label>
+                        <input type="url" id="website-url" placeholder="e.g., https://www.example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="industry">Industry/Niche *</label>
+                        <input type="text" id="industry" placeholder="e.g., Real Estate, Healthcare, Technology">
+                    </div>
+                    <div class="form-group">
+                        <label for="target-audience">Target Audience (Demographics, Interests) *</label>
+                        <textarea id="target-audience" placeholder="e.g., Adults 25-45, homeowners, interested in luxury living"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="geographic-targeting">Geographic Targeting *</label>
+                        <input type="text" id="geographic-targeting" placeholder="e.g., Chicago, IL metropolitan area">
+                    </div>
+                    <div class="form-group">
+                        <label for="unique-selling-points">Unique Selling Points (3-5) *</label>
+                        <textarea id="unique-selling-points" placeholder="e.g., 1. Luxury finishes and modern amenities&#10;2. Prime downtown location&#10;3. 24/7 concierge service"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="competitors">Competitors (3-5)</label>
+                        <input type="text" id="competitors" placeholder="e.g., Competitor A, Competitor B, Competitor C">
+                    </div>
+                    <div class="form-group">
+                        <label for="brand-voice">Brand Voice/Tone *</label>
+                        <textarea id="brand-voice" placeholder="e.g., Professional, upscale, friendly"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="call-to-action">Call to Action Preferences *</label>
+                        <input type="text" id="call-to-action" placeholder="e.g., Schedule a tour, Contact us, Learn more">
+                    </div>
+                    <div class="form-group">
+                        <label for="budget">Budget Information</label>
+                        <input type="text" id="budget" placeholder="e.g., $5,000/month">
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="industry">Industry/Niche *</label>
-                    <input type="text" id="industry" placeholder="e.g., Real Estate, Healthcare, Technology">
+                
+                <!-- Action Buttons -->
+                <div class="action-buttons" style="display: flex; justify-content: space-between; align-items: center; margin-top: 20px;">
+                    <button type="button" id="save-client-btn" class="btn" style="background-color: #4285f4; color: white; padding: 12px 20px; border: none; border-radius: 4px; cursor: pointer; font-weight: bold;">
+                        💾 Save Client
+                    </button>
+                    <div class="nav-buttons">
+                        <button class="next-btn" id="client-info-next">Next: Campaign Structure</button>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="target-audience">Target Audience (Demographics, Interests) *</label>
-                    <textarea id="target-audience" placeholder="e.g., Adults 25-45, homeowners, interested in luxury living"></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="geographic-targeting">Geographic Targeting *</label>
-                    <input type="text" id="geographic-targeting" placeholder="e.g., Chicago, IL metropolitan area">
-                </div>
-                <div class="form-group">
-                    <label for="unique-selling-points">Unique Selling Points (3-5) *</label>
-                    <textarea id="unique-selling-points" placeholder="e.g., 1. Luxury finishes and modern amenities&#10;2. Prime downtown location&#10;3. 24/7 concierge service"></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="competitors">Competitors (3-5)</label>
-                    <input type="text" id="competitors" placeholder="e.g., Competitor A, Competitor B, Competitor C">
-                </div>
-                <div class="form-group">
-                    <label for="brand-voice">Brand Voice/Tone *</label>
-                    <textarea id="brand-voice" placeholder="e.g., Professional, upscale, friendly"></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="call-to-action">Call to Action Preferences *</label>
-                    <input type="text" id="call-to-action" placeholder="e.g., Schedule a tour, Contact us, Learn more">
-                </div>
-                <div class="form-group">
-                    <label for="budget">Budget Information</label>
-                    <input type="text" id="budget" placeholder="e.g., $5,000/month">
-                </div>
-                <div class="nav-buttons">
-                    <div></div>
-                    <button class="next-btn" id="client-info-next">Next: Campaign Structure</button>
-                </div>
+                
+                <!-- Save Status Indicator -->
+                <div id="save-status" class="save-status" style="display: none; margin-top: 15px; padding: 10px; border-radius: 4px; font-weight: bold;"></div>
             </div>
             
             <!-- Campaign Structure Tab -->
             <div id="campaign-structure-tab" class="tab-content">
                 <h2>Campaign Structure</h2>
                 <div class="flex-row">
-                    <div class="col-50">
+                    <div style="width: 40%;">
+                        <h3>Create New</h3>
+                        <button id="add-campaign-btn" style="margin-right: 10px;">Add Campaign</button>
+                        <button id="add-ad-group-btn">Add Ad Group</button>
+                        
+                        <!-- Campaign Creation Form -->
+                        <div id="campaign-form" class="creation-form" style="display: none;">
+                            <h4>Create New Campaign</h4>
+                            <div class="form-group">
+                                <label for="campaign-name-input">Campaign Name *</label>
+                                <input type="text" id="campaign-name-input" placeholder="e.g., AMLI Downtown Luxury Apartments">
+                                <div id="campaign-name-error" class="error"></div>
+                            </div>
+                            <div class="form-group">
+                                <input type="checkbox" id="unit-type-checkbox">
+                                <label for="unit-type-checkbox">Unit Type Campaign</label>
+                                <div style="font-size: 12px; color: #666; margin-top: 5px;">
+                                    Check this if the campaign focuses on specific unit types (e.g., "Studio Apartments", "Two Bedroom Homes"). Leave unchecked for General Search campaigns with location-based targeting.
+                                </div>
+                            </div>
+                            <div class="form-actions">
+                                <button id="save-campaign-btn" class="save-btn">Create Campaign</button>
+                                <button id="cancel-campaign-btn" class="cancel-btn">Cancel</button>
+                            </div>
+                            <div id="campaign-form-message" class="success"></div>
+                        </div>
+                        
+                        <!-- Ad Group Creation Form -->
+                        <div id="ad-group-form" class="creation-form" style="display: none;">
+                            <h4>Create New Ad Group</h4>
+                            <div class="form-group">
+                                <label for="parent-campaign-select">Parent Campaign *</label>
+                                <select id="parent-campaign-select">
+                                    <option value="">Select a campaign</option>
+                                </select>
+                                <div id="parent-campaign-error" class="error"></div>
+                            </div>
+                            <div class="form-group">
+                                <label for="ad-group-name-input">Ad Group Name *</label>
+                                <input type="text" id="ad-group-name-input" placeholder="e.g., Studio Apartments, Downtown Location">
+                                <div id="ad-group-name-error" class="error"></div>
+                            </div>
+                            <div class="form-actions">
+                                <button id="save-ad-group-btn" class="save-btn">Create Ad Group</button>
+                                <button id="cancel-ad-group-btn" class="cancel-btn">Cancel</button>
+                            </div>
+                            <div id="ad-group-form-message" class="success"></div>
+                        </div>
+                    </div>
+                    <div style="width: 60%;">
                         <h3>Campaigns and Ad Groups</h3>
                         <div id="campaign-list">
                             <!-- Campaign items will be added here -->
                         </div>
-                    </div>
-                    <div class="col-50">
-                        <h3>Actions</h3>
-                        <button id="add-campaign-btn">Add Campaign</button>
-                        <button id="add-ad-group-btn">Add Ad Group</button>
                     </div>
                 </div>
                 <div class="nav-buttons">
@@ -436,10 +793,18 @@
                     
                     <div id="keyword-suggestions" style="display: none; margin-top: 15px;">
                         <h4>Keyword Suggestions</h4>
+                        <div style="margin-bottom: 10px;">
+                            <button id="save-selected-keywords-btn" style="background-color: #28a745; color: white;">Save Selected Keywords</button>
+                            <button id="select-all-keywords-btn" style="background-color: #6c757d; color: white; margin-left: 10px;">Select All</button>
+                            <button id="clear-selection-btn" style="background-color: #dc3545; color: white; margin-left: 10px;">Clear Selection</button>
+                        </div>
                         <div style="overflow-x: auto; max-height: 500px; overflow-y: auto; border: 1px solid #ddd; border-radius: 4px;">
                             <table id="keywords-table" style="width: 100%; border-collapse: collapse; margin-top: 0;">
                                 <thead>
                                     <tr style="background-color: #f5f5f5; border-bottom: 2px solid #ddd;">
+                                        <th style="padding: 10px; text-align: center; border-right: 1px solid #ddd;">
+                                            <input type="checkbox" id="select-all-checkbox">
+                                        </th>
                                         <th class="sortable" data-sort="type" style="padding: 10px; text-align: left; cursor: pointer; border-right: 1px solid #ddd;">
                                             Type <span class="sort-arrow">↕</span>
                                         </th>
@@ -495,6 +860,9 @@
                     </div>
                     <div class="col-50">
                         <h3>Keyword List</h3>
+                        <div style="margin-bottom: 10px;">
+                            <button id="save-keywords-to-db-btn" style="background-color: #1a73e8; color: white; display: none;">Save Keywords to Database</button>
+                        </div>
                         <div id="keyword-list-container">
                             <div class="keyword-list">
                                 <p>Select an ad group to view keywords</p>
@@ -527,10 +895,16 @@
                             </select>
                         </div>
                         <button id="generate-ad-copy">Generate Ad Copy</button>
+                        <button id="optimize-headlines" style="margin-left: 10px;">🔧 Optimize Headlines</button>
                         
                         <div id="loading-ad-copy" class="loading">
                             <div class="loading-spinner"></div>
                             <p>Generating AI-powered ad copy...</p>
+                        </div>
+                        
+                        <div id="optimization-feedback" style="margin-top: 10px; padding: 10px; border-radius: 4px; display: none;">
+                            <h4>✅ Headline Optimization Results</h4>
+                            <div id="optimization-details"></div>
                         </div>
                         
                         <h4>Headlines</h4>
@@ -624,6 +998,44 @@
                         </div>
                     </div>
                 </div>
+                
+                <!-- Keyword Coverage Analysis Section -->
+                <div id="keyword-coverage-analysis" class="coverage-analysis" style="display: none;">
+                    <div class="coverage-header">
+                        <h3 class="coverage-title">🎯 Keyword Coverage Analysis</h3>
+                        <div style="display: flex; align-items: center; gap: 10px;">
+                            <div id="coverage-score" class="coverage-score">Coverage: 0%</div>
+                            <button id="refresh-analysis-btn" class="refresh-analysis-btn">Refresh Analysis</button>
+                        </div>
+                    </div>
+                    <div class="coverage-content">
+                        <div class="coverage-chart">
+                            <canvas id="coverage-chart" width="300" height="300"></canvas>
+                        </div>
+                        <div class="coverage-details">
+                            <div class="coverage-metric">
+                                <span class="metric-label">Total Keywords:</span>
+                                <span id="total-keywords" class="metric-value">0</span>
+                            </div>
+                            <div class="coverage-metric">
+                                <span class="metric-label">Fully Covered:</span>
+                                <span id="covered-keywords" class="metric-value">0</span>
+                            </div>
+                            <div class="coverage-metric">
+                                <span class="metric-label">Partially Covered:</span>
+                                <span id="partial-keywords" class="metric-value">0</span>
+                            </div>
+                            <div class="coverage-metric">
+                                <span class="metric-label">Not Covered:</span>
+                                <span id="missing-keywords" class="metric-value">0</span>
+                            </div>
+                            <div class="coverage-keywords">
+                                <h4>Keyword Details:</h4>
+                                <div id="keyword-coverage-list"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="nav-buttons">
                     <button class="prev-btn" id="ad-copy-prev">Previous: Keywords</button>
                     <button class="next-btn" id="ad-copy-next">Next: Export</button>
@@ -657,10 +1069,14 @@
         </div>
     </div>
 
+    <!-- Load Chart.js for data visualization -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
     <!-- Load JavaScript files -->
     <script src="openai_config.js"></script>
     <script src="openai_connector.js"></script>
     <script src="agentic_ad_copy_generator.js"></script>
+    <script src="database_client.js"></script>
     <script src="error_handling.js"></script>
     
     <script>
@@ -682,6 +1098,25 @@
         const addCampaignBtn = document.getElementById('add-campaign-btn');
         const addAdGroupBtn = document.getElementById('add-ad-group-btn');
         const campaignList = document.getElementById('campaign-list');
+        
+        // Campaign form elements
+        const campaignForm = document.getElementById('campaign-form');
+        const campaignNameInput = document.getElementById('campaign-name-input');
+        const unitTypeCheckbox = document.getElementById('unit-type-checkbox');
+        const saveCampaignBtn = document.getElementById('save-campaign-btn');
+        const cancelCampaignBtn = document.getElementById('cancel-campaign-btn');
+        const campaignFormMessage = document.getElementById('campaign-form-message');
+        const campaignNameError = document.getElementById('campaign-name-error');
+        
+        // Ad Group form elements
+        const adGroupForm = document.getElementById('ad-group-form');
+        const parentCampaignSelect = document.getElementById('parent-campaign-select');
+        const adGroupNameInput = document.getElementById('ad-group-name-input');
+        const saveAdGroupBtn = document.getElementById('save-ad-group-btn');
+        const cancelAdGroupBtn = document.getElementById('cancel-ad-group-btn');
+        const adGroupFormMessage = document.getElementById('ad-group-form-message');
+        const parentCampaignError = document.getElementById('parent-campaign-error');
+        const adGroupNameError = document.getElementById('ad-group-name-error');
         
         // Keywords elements
         const keywordCampaignSelect = document.getElementById('keyword-campaign-select');
@@ -705,6 +1140,7 @@
         const adCampaignSelect = document.getElementById('ad-campaign-select');
         const adGroupSelect = document.getElementById('ad-group-select');
         const generateAdCopyBtn = document.getElementById('generate-ad-copy');
+        const optimizeHeadlinesBtn = document.getElementById('optimize-headlines');
         const loadingAdCopy = document.getElementById('loading-ad-copy');
         const headline1 = document.getElementById('headline1');
         const headline2 = document.getElementById('headline2');
@@ -740,6 +1176,16 @@
         const adSaveMessage = document.getElementById('ad-save-message');
         const adsListContainer = document.getElementById('ads-list-container');
         
+        // Keyword Coverage Analysis elements
+        const keywordCoverageAnalysis = document.getElementById('keyword-coverage-analysis');
+        const coverageScore = document.getElementById('coverage-score');
+        const refreshAnalysisBtn = document.getElementById('refresh-analysis-btn');
+        const totalKeywordsEl = document.getElementById('total-keywords');
+        const coveredKeywordsEl = document.getElementById('covered-keywords');
+        const partialKeywordsEl = document.getElementById('partial-keywords');
+        const missingKeywordsEl = document.getElementById('missing-keywords');
+        const keywordCoverageList = document.getElementById('keyword-coverage-list');
+        
         // Export elements
         const exportCampaignSelect = document.getElementById('export-campaign-select');
         const exportFormatSelect = document.getElementById('export-format');
@@ -747,6 +1193,15 @@
         const exportResult = document.getElementById('export-result');
         
         // Client Information elements
+        const clientSelector = document.getElementById('client-selector');
+        const newClientBtn = document.getElementById('new-client-btn');
+        const refreshClientsBtn = document.getElementById('refresh-clients-btn');
+        const currentClientIndicator = document.getElementById('current-client-indicator');
+        const currentClientName = document.getElementById('current-client-name');
+        const syncStatus = document.getElementById('sync-status');
+        const saveClientBtn = document.getElementById('save-client-btn');
+        const saveStatus = document.getElementById('save-status');
+        
         const clientName = document.getElementById('client-name');
         const websiteUrl = document.getElementById('website-url');
         const industry = document.getElementById('industry');
@@ -762,10 +1217,23 @@
         let campaignsData = {};
         window.campaignsData = campaignsData; // Make it globally accessible
         
+        // Database Client
+        let databaseClient = new DatabaseClient();
+        window.databaseClient = databaseClient; // Make it globally accessible
+        
         // Initialize the application
-        function init() {
-            // Load data from localStorage if available
-            loadData();
+        async function init() {
+            // Initialize database client
+            await initializeDatabaseClient();
+            
+            // Set up client management
+            setupClientManagement();
+            
+            // Check for data migration opportunities
+            checkForDataMigration();
+            
+            // Load data from Supabase or localStorage
+            await loadData();
             
             // Set up tab navigation
             setupTabs();
@@ -793,6 +1261,152 @@
             updateSelects();
         }
         
+        // Check for data migration opportunities
+        function checkForDataMigration() {
+            if (databaseClient.hasLocalStorageData() && !databaseClient.isUsingSupabase()) {
+                showMigrationNotification();
+            } else if (databaseClient.isUsingSupabase()) {
+                loadDataFromSupabase();
+            }
+        }
+        
+        // Show migration notification
+        function showMigrationNotification() {
+            const notification = document.createElement('div');
+            notification.id = 'migration-notification';
+            notification.style.cssText = `
+                position: fixed;
+                top: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: linear-gradient(135deg, #4285f4, #34a853);
+                color: white;
+                padding: 15px 25px;
+                border-radius: 8px;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+                z-index: 1000;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                max-width: 90%;
+                text-align: center;
+            `;
+            
+            notification.innerHTML = `
+                <div style="margin-bottom: 10px;">
+                    <strong>🚀 Upgrade Available!</strong>
+                </div>
+                <div style="margin-bottom: 15px; font-size: 14px;">
+                    Migrate your local data to Supabase for cloud storage, multi-device access, and better reliability.
+                </div>
+                <button onclick="performMigration()" style="background: white; color: #4285f4; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; margin-right: 10px; font-weight: bold;">
+                    Migrate Now
+                </button>
+                <button onclick="dismissMigrationNotification()" style="background: transparent; color: white; border: 1px solid white; padding: 8px 16px; border-radius: 4px; cursor: pointer;">
+                    Later
+                </button>
+            `;
+            
+            document.body.appendChild(notification);
+        }
+        
+        // Perform data migration
+        async function performMigration() {
+            const notification = document.getElementById('migration-notification');
+            if (notification) {
+                notification.innerHTML = `
+                    <div style="display: flex; align-items: center; justify-content: center;">
+                        <div style="margin-right: 10px;">🔄</div>
+                        <div>Migrating your data to Supabase...</div>
+                    </div>
+                `;
+            }
+            
+            try {
+                const result = await databaseClient.migrateLocalStorageData();
+                
+                if (notification) {
+                    notification.innerHTML = `
+                        <div style="margin-bottom: 10px;">
+                            <strong>✅ Migration Successful!</strong>
+                        </div>
+                        <div style="margin-bottom: 15px; font-size: 14px;">
+                            Your data has been successfully migrated to Supabase. You can now access it from any device!
+                        </div>
+                        <button onclick="dismissMigrationNotification(); loadDataFromSupabase();" style="background: white; color: #4285f4; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-weight: bold;">
+                            Continue
+                        </button>
+                    `;
+                }
+                
+                console.log('Migration successful:', result);
+            } catch (error) {
+                console.error('Migration failed:', error);
+                
+                if (notification) {
+                    notification.innerHTML = `
+                        <div style="margin-bottom: 10px;">
+                            <strong>❌ Migration Failed</strong>
+                        </div>
+                        <div style="margin-bottom: 15px; font-size: 14px;">
+                            ${error.message || 'An error occurred during migration. Please try again.'}
+                        </div>
+                        <button onclick="performMigration()" style="background: white; color: #4285f4; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; margin-right: 10px; font-weight: bold;">
+                            Retry
+                        </button>
+                        <button onclick="dismissMigrationNotification()" style="background: transparent; color: white; border: 1px solid white; padding: 8px 16px; border-radius: 4px; cursor: pointer;">
+                            Cancel
+                        </button>
+                    `;
+                }
+            }
+        }
+        
+        // Load data from Supabase
+        async function loadDataFromSupabase() {
+            try {
+                const client = await databaseClient.getCurrentClient();
+                if (client) {
+                    const { clientInfo, campaignsData: supabaseCampaignsData } = databaseClient.convertSupabaseToLocalFormat(client);
+                    
+                    // Update the form fields with client info
+                    updateClientInfoForm(clientInfo);
+                    
+                    // Update campaigns data
+                    campaignsData = supabaseCampaignsData;
+                    window.campaignsData = campaignsData;
+                    
+                    // Re-render the UI
+                    renderCampaigns();
+                    updateSelects();
+                    
+                    console.log('Data loaded from Supabase successfully');
+                }
+            } catch (error) {
+                console.error('Error loading data from Supabase:', error);
+            }
+        }
+        
+        // Update client info form
+        function updateClientInfoForm(clientInfo) {
+            if (clientName) clientName.value = clientInfo.clientName || '';
+            if (websiteUrl) websiteUrl.value = clientInfo.websiteUrl || '';
+            if (industry) industry.value = clientInfo.industry || '';
+            if (targetAudience) targetAudience.value = clientInfo.targetAudience || '';
+            if (geographicTargeting) geographicTargeting.value = clientInfo.geographicTargeting || '';
+            if (uniqueSellingPoints) uniqueSellingPoints.value = clientInfo.uniqueSellingPoints || '';
+            if (competitors) competitors.value = clientInfo.competitors || '';
+            if (brandVoice) brandVoice.value = clientInfo.brandVoice || '';
+            if (callToAction) callToAction.value = clientInfo.callToAction || '';
+            if (budget) budget.value = clientInfo.budget || '';
+        }
+        
+        // Dismiss migration notification
+        function dismissMigrationNotification() {
+            const notification = document.getElementById('migration-notification');
+            if (notification) {
+                notification.remove();
+            }
+        }
+        
         // Tab Navigation
         function setupTabs() {
             tabLinks.forEach(link => {
@@ -811,10 +1425,208 @@
             });
         }
         
+        // Initialize Database Client
+        async function initializeDatabaseClient() {
+            await databaseClient.initializeSupabaseStatus();
+            await loadClientsDropdown();
+        }
+
+        // Client Management Setup
+        function setupClientManagement() {
+            // Client selector change
+            clientSelector.addEventListener('change', async () => {
+                const clientId = clientSelector.value;
+                if (clientId) {
+                    await loadSelectedClient(clientId);
+                }
+            });
+
+            // New client button
+            newClientBtn.addEventListener('click', () => {
+                clearClientForm();
+                databaseClient.clearCurrentClient();
+                updateCurrentClientIndicator();
+                clientSelector.value = '';
+            });
+
+            // Refresh clients button
+            refreshClientsBtn.addEventListener('click', () => {
+                loadClientsDropdown();
+            });
+
+            // Save client button
+            saveClientBtn.addEventListener('click', async () => {
+                await saveClientInfo();
+            });
+
+            // Auto-save on form changes (debounced)
+            let saveTimeout;
+            const formElements = [clientName, websiteUrl, industry, targetAudience, geographicTargeting, uniqueSellingPoints, competitors, brandVoice, callToAction, budget];
+            formElements.forEach(element => {
+                element.addEventListener('input', () => {
+                    showSaveStatus('Modified...', 'warning');
+                    clearTimeout(saveTimeout);
+                    saveTimeout = setTimeout(() => {
+                        if (databaseClient.currentClientId) {
+                            saveClientInfo(true); // Auto-save
+                        }
+                    }, 3000);
+                });
+            });
+        }
+
+        // Load clients dropdown
+        async function loadClientsDropdown() {
+            try {
+                if (!databaseClient.isSupabaseEnabled) {
+                    clientSelector.style.display = 'none';
+                    newClientBtn.textContent = 'Create Client';
+                    return;
+                }
+
+                showSyncStatus('Loading clients...', 'loading');
+                const clients = await databaseClient.getAllClients();
+                
+                clientSelector.innerHTML = '<option value="">-- Select an existing client --</option>';
+                clients.forEach(client => {
+                    const option = document.createElement('option');
+                    option.value = client.id;
+                    option.textContent = `${client.name} (${client.industry || 'No industry'})`;
+                    clientSelector.appendChild(option);
+                });
+
+                // Select current client if exists
+                if (databaseClient.currentClientId) {
+                    clientSelector.value = databaseClient.currentClientId;
+                    updateCurrentClientIndicator();
+                }
+
+                showSyncStatus('', '');
+            } catch (error) {
+                console.error('Error loading clients:', error);
+                showSyncStatus('Error loading clients', 'error');
+            }
+        }
+
+        // Load selected client
+        async function loadSelectedClient(clientId) {
+            try {
+                showSyncStatus('Loading client data...', 'loading');
+                const client = await databaseClient.setCurrentClient(clientId);
+                
+                if (client) {
+                    const { clientInfo } = databaseClient.convertSupabaseToLocalFormat(client);
+                    updateClientInfoForm(clientInfo);
+                    updateCurrentClientIndicator();
+                    showSyncStatus('Loaded', 'success');
+                    showSaveStatus('Client loaded successfully', 'success');
+                    
+                    // Load campaigns for this client
+                    await loadCampaignsForCurrentClient();
+                } else {
+                    showSyncStatus('Error', 'error');
+                }
+            } catch (error) {
+                console.error('Error loading client:', error);
+                showSyncStatus('Error', 'error');
+                showSaveStatus(`Error loading client: ${error.message}`, 'error');
+            }
+        }
+
+        // Load campaigns for current client
+        async function loadCampaignsForCurrentClient() {
+            try {
+                if (!databaseClient.currentClientId) return;
+                
+                const client = await databaseClient.getCurrentClient();
+                if (client && client.campaigns) {
+                    const { campaignsData: supabaseCampaignsData } = databaseClient.convertSupabaseToLocalFormat(client);
+                    campaignsData = supabaseCampaignsData;
+                    window.campaignsData = campaignsData;
+                    
+                    renderCampaigns();
+                    updateSelects();
+                }
+            } catch (error) {
+                console.error('Error loading campaigns:', error);
+            }
+        }
+
+        // Clear client form
+        function clearClientForm() {
+            clientName.value = '';
+            websiteUrl.value = '';
+            industry.value = '';
+            targetAudience.value = '';
+            geographicTargeting.value = '';
+            uniqueSellingPoints.value = '';
+            competitors.value = '';
+            brandVoice.value = '';
+            callToAction.value = '';
+            budget.value = '';
+        }
+
+        // Update current client indicator
+        function updateCurrentClientIndicator() {
+            if (databaseClient.currentClient) {
+                currentClientIndicator.style.display = 'block';
+                currentClientName.textContent = databaseClient.currentClient.name;
+                showSyncStatus('✅ Connected', 'success');
+            } else {
+                currentClientIndicator.style.display = 'none';
+            }
+        }
+
+        // Show sync status
+        function showSyncStatus(message, type) {
+            if (!message) {
+                syncStatus.textContent = '';
+                return;
+            }
+
+            syncStatus.textContent = message;
+            syncStatus.className = `sync-status ${type}`;
+            
+            const colors = {
+                loading: '#fbbc04',
+                success: '#34a853',
+                error: '#ea4335',
+                warning: '#ff9800'
+            };
+            
+            syncStatus.style.color = colors[type] || '#666';
+        }
+
+        // Show save status
+        function showSaveStatus(message, type) {
+            if (!message) {
+                saveStatus.style.display = 'none';
+                return;
+            }
+
+            saveStatus.style.display = 'block';
+            saveStatus.textContent = message;
+            
+            const styles = {
+                success: { backgroundColor: '#d4edda', color: '#155724', border: '1px solid #c3e6cb' },
+                error: { backgroundColor: '#f8d7da', color: '#721c24', border: '1px solid #f5c6cb' },
+                warning: { backgroundColor: '#fff3cd', color: '#856404', border: '1px solid #ffeaa7' },
+                loading: { backgroundColor: '#d1ecf1', color: '#0c5460', border: '1px solid #bee5eb' }
+            };
+            
+            const style = styles[type] || styles.loading;
+            Object.assign(saveStatus.style, style);
+            
+            if (type === 'success') {
+                setTimeout(() => {
+                    saveStatus.style.display = 'none';
+                }, 3000);
+            }
+        }
+
         // Navigation Buttons
         function setupNavigation() {
             clientInfoNextBtn.addEventListener('click', () => {
-                saveClientInfo();
                 navigateToTab('campaign-structure');
             });
             
@@ -856,47 +1668,223 @@
         
         // Campaign Structure
         function setupCampaignStructure() {
+            // Show campaign form
             addCampaignBtn.addEventListener('click', () => {
-                const campaignName = prompt('Enter campaign name:');
-                if (campaignName && campaignName.trim() !== '') {
-                    const isUnitType = confirm('Is this a unit type campaign? (OK = Yes, Cancel = No)');
-                    addCampaign(campaignName.trim(), isUnitType);
-                }
+                hideForms();
+                campaignForm.style.display = 'block';
+                clearCampaignForm();
             });
             
+            // Show ad group form
             addAdGroupBtn.addEventListener('click', () => {
                 if (Object.keys(campaignsData).length === 0) {
                     alert('Please create a campaign first.');
                     return;
                 }
-                
-                const campaignId = prompt('Select campaign ID:\n' + 
-                    Object.keys(campaignsData).map(id => `${id}: ${campaignsData[id].name}`).join('\n'));
-                
-                if (campaignId && campaignsData[campaignId]) {
-                    const adGroupName = prompt('Enter ad group name:');
-                    if (adGroupName && adGroupName.trim() !== '') {
-                        addAdGroup(campaignId, adGroupName.trim());
-                    }
+                hideForms();
+                updateParentCampaignSelect();
+                adGroupForm.style.display = 'block';
+                clearAdGroupForm();
+            });
+            
+            // Campaign form handlers
+            saveCampaignBtn.addEventListener('click', async () => {
+                if (validateCampaignForm()) {
+                    const campaignName = campaignNameInput.value.trim();
+                    const isUnitType = unitTypeCheckbox.checked;
+                    await addCampaign(campaignName, isUnitType);
+                    setTimeout(() => {
+                        hideForms();
+                    }, 2000);
                 }
+            });
+            
+            cancelCampaignBtn.addEventListener('click', () => {
+                hideForms();
+            });
+            
+            // Ad group form handlers
+            saveAdGroupBtn.addEventListener('click', () => {
+                if (validateAdGroupForm()) {
+                    const campaignId = parentCampaignSelect.value;
+                    const adGroupName = adGroupNameInput.value.trim();
+                    addAdGroup(campaignId, adGroupName);
+                    showAdGroupFormMessage('Ad group created successfully!');
+                    setTimeout(() => {
+                        hideForms();
+                    }, 1500);
+                }
+            });
+            
+            cancelAdGroupBtn.addEventListener('click', () => {
+                hideForms();
             });
         }
         
-        function addCampaign(name, isUnitType = false) {
-            const campaignId = 'campaign' + (Object.keys(campaignsData).length + 1);
-            const clientInfo = getClientInfo();
-            campaignsData[campaignId] = {
-                name: name,
-                adGroups: {},
-                keywords: {},
-                ads: {},
-                isUnitType: isUnitType,
-                budget: clientInfo.budget || ''
-            };
+        function hideForms() {
+            campaignForm.style.display = 'none';
+            adGroupForm.style.display = 'none';
+            clearFormMessages();
+        }
+        
+        function clearCampaignForm() {
+            campaignNameInput.value = '';
+            unitTypeCheckbox.checked = false;
+            campaignNameError.textContent = '';
+        }
+        
+        function clearAdGroupForm() {
+            parentCampaignSelect.value = '';
+            adGroupNameInput.value = '';
+            parentCampaignError.textContent = '';
+            adGroupNameError.textContent = '';
+        }
+        
+        function clearFormMessages() {
+            campaignFormMessage.textContent = '';
+            adGroupFormMessage.textContent = '';
+        }
+        
+        function validateCampaignForm() {
+            let isValid = true;
+            campaignNameError.textContent = '';
             
-            saveData();
-            renderCampaigns();
-            updateSelects();
+            if (!campaignNameInput.value.trim()) {
+                campaignNameError.textContent = 'Campaign name is required';
+                isValid = false;
+            }
+            
+            return isValid;
+        }
+        
+        function validateAdGroupForm() {
+            let isValid = true;
+            parentCampaignError.textContent = '';
+            adGroupNameError.textContent = '';
+            
+            if (!parentCampaignSelect.value) {
+                parentCampaignError.textContent = 'Please select a parent campaign';
+                isValid = false;
+            }
+            
+            if (!adGroupNameInput.value.trim()) {
+                adGroupNameError.textContent = 'Ad group name is required';
+                isValid = false;
+            }
+            
+            return isValid;
+        }
+        
+        function showCampaignFormMessage(message, type = 'success') {
+            campaignFormMessage.textContent = message;
+            campaignFormMessage.className = type === 'error' ? 'error' : 
+                                          type === 'loading' ? 'loading' : 'success';
+            campaignFormMessage.style.display = 'block';
+        }
+        
+        function showAdGroupFormMessage(message) {
+            adGroupFormMessage.textContent = message;
+        }
+        
+        function updateParentCampaignSelect() {
+            parentCampaignSelect.innerHTML = '<option value="">Select a campaign</option>';
+            
+            for (const campaignId in campaignsData) {
+                const campaign = campaignsData[campaignId];
+                const unitTypeIndicator = campaign.isUnitType ? ' (Unit Type)' : '';
+                
+                const option = document.createElement('option');
+                option.value = campaignId;
+                option.textContent = campaign.name + unitTypeIndicator;
+                
+                parentCampaignSelect.appendChild(option);
+            }
+        }
+        
+        async function addCampaign(name, isUnitType = false) {
+            try {
+                if (!databaseClient.currentClientId && databaseClient.isSupabaseEnabled) {
+                    showCampaignFormMessage('Please select or create a client first before creating campaigns.', 'error');
+                    return;
+                }
+
+                showCampaignFormMessage('Creating campaign...', 'loading');
+
+                const campaignData = {
+                    name: name,
+                    isUnitType: isUnitType,
+                    objective: '',
+                    budget: null
+                };
+
+                if (databaseClient.isSupabaseEnabled && databaseClient.currentClientId) {
+                    // Save to Supabase
+                    const savedCampaign = await databaseClient.saveCampaign(campaignData);
+                    
+                    // Add to local data
+                    campaignsData[savedCampaign.id] = {
+                        name: savedCampaign.name,
+                        isUnitType: savedCampaign.is_unit_type,
+                        adGroups: {},
+                        keywords: {},
+                        ads: {},
+                        budget: savedCampaign.budget || ''
+                    };
+
+                    // If it's not a unit type campaign, auto-create "Location" ad group
+                    if (!isUnitType) {
+                        const locationAdGroupData = {
+                            campaign_id: savedCampaign.id,
+                            name: 'Location',
+                            theme: 'Location-based targeting',
+                            target_audience: '',
+                            is_location_ad_group: true
+                        };
+                        
+                        const locationAdGroup = await databaseClient.createAdGroup(locationAdGroupData);
+                        campaignsData[savedCampaign.id].adGroups[locationAdGroup.id] = {
+                            name: 'Location',
+                            keywords: [],
+                            ads: [],
+                            isLocationAdGroup: true
+                        };
+                    }
+
+                    showCampaignFormMessage('Campaign created successfully in database!', 'success');
+                } else {
+                    // Fall back to localStorage
+                    const campaignId = 'campaign' + (Object.keys(campaignsData).length + 1);
+                    const clientInfo = getClientInfo();
+                    campaignsData[campaignId] = {
+                        name: name,
+                        adGroups: {},
+                        keywords: {},
+                        ads: {},
+                        isUnitType: isUnitType,
+                        budget: clientInfo.budget || ''
+                    };
+
+                    if (!isUnitType) {
+                        const locationAdGroupId = 'adgroup_location_' + Date.now();
+                        campaignsData[campaignId].adGroups[locationAdGroupId] = {
+                            name: 'Location',
+                            keywords: [],
+                            ads: [],
+                            isLocationAdGroup: true
+                        };
+                    }
+
+                    saveData(); // Only save to localStorage when not using Supabase
+                    showCampaignFormMessage('Campaign created locally!', 'success');
+                }
+                
+                renderCampaigns();
+                updateSelects();
+                
+            } catch (error) {
+                console.error('Error creating campaign:', error);
+                showCampaignFormMessage(`Error creating campaign: ${error.message}`, 'error');
+            }
         }
         
         function addAdGroup(campaignId, name) {
@@ -917,66 +1905,88 @@
         }
         
         function deleteCampaign(campaignId) {
-            if (confirm(`Are you sure you want to delete the campaign "${campaignsData[campaignId].name}" and all its ad groups?`)) {
-                delete campaignsData[campaignId];
-                saveData();
-                renderCampaigns();
-                updateSelects();
-            }
+            delete campaignsData[campaignId];
+            saveData();
+            renderCampaigns();
+            updateSelects();
         }
         
         function deleteAdGroup(campaignId, adGroupId) {
-            if (confirm(`Are you sure you want to delete the ad group "${campaignsData[campaignId].adGroups[adGroupId].name}"?`)) {
-                delete campaignsData[campaignId].adGroups[adGroupId];
-                saveData();
-                renderCampaigns();
-                updateSelects();
-            }
+            delete campaignsData[campaignId].adGroups[adGroupId];
+            saveData();
+            renderCampaigns();
+            updateSelects();
         }
         
         function renderCampaigns() {
             campaignList.innerHTML = '';
             
+            if (Object.keys(campaignsData).length === 0) {
+                campaignList.innerHTML = '<p style="color: #666; font-style: italic;">No campaigns created yet. Click "Add Campaign" to get started.</p>';
+                return;
+            }
+            
             for (const campaignId in campaignsData) {
                 const campaign = campaignsData[campaignId];
                 
-                // Create campaign item
-                const campaignItem = document.createElement('div');
-                campaignItem.className = 'campaign-item';
+                // Create campaign container
+                const campaignContainer = document.createElement('div');
+                campaignContainer.className = 'campaign-list-item';
+                
+                // Create campaign header
+                const campaignHeader = document.createElement('div');
+                campaignHeader.className = 'campaign-header';
+                
                 const unitTypeIndicator = campaign.isUnitType ? ' <span style="background: #ffe58f; color: #ad8b00; padding: 2px 6px; border-radius: 3px; font-size: 11px; font-weight: bold;">UNIT TYPE</span>' : '';
-                campaignItem.innerHTML = `
-                    <div>${campaign.name}${unitTypeIndicator}</div>
-                    <button class="delete-btn" data-campaign-id="${campaignId}">Delete</button>
+                
+                campaignHeader.innerHTML = `
+                    <div class="campaign-title">${campaign.name}${unitTypeIndicator}</div>
+                    <button class="delete-btn" data-campaign-id="${campaignId}">Delete Campaign</button>
                 `;
-                campaignList.appendChild(campaignItem);
+                
+                campaignContainer.appendChild(campaignHeader);
                 
                 // Add event listener to delete button
-                campaignItem.querySelector('.delete-btn').addEventListener('click', (e) => {
+                campaignHeader.querySelector('.delete-btn').addEventListener('click', (e) => {
                     e.stopPropagation();
-                    deleteCampaign(campaignId);
+                    if (confirm(`Are you sure you want to delete the campaign "${campaign.name}" and all its ad groups?`)) {
+                        deleteCampaign(campaignId);
+                    }
                 });
                 
+                // Create ad groups container
+                const adGroupsContainer = document.createElement('div');
+                adGroupsContainer.className = 'ad-group-list';
+                
                 // Render ad groups for this campaign
-                if (campaign.adGroups) {
+                if (campaign.adGroups && Object.keys(campaign.adGroups).length > 0) {
                     for (const adGroupId in campaign.adGroups) {
                         const adGroup = campaign.adGroups[adGroupId];
                         
                         // Create ad group item
                         const adGroupItem = document.createElement('div');
-                        adGroupItem.className = 'ad-group-item';
+                        adGroupItem.className = 'ad-group-item-new';
                         adGroupItem.innerHTML = `
                             <div>${adGroup.name}</div>
-                            <button class="delete-btn" data-ad-group-id="${adGroupId}">Delete</button>
+                            <button class="delete-btn" data-ad-group-id="${adGroupId}" style="font-size: 12px; padding: 4px 8px;">Delete</button>
                         `;
-                        campaignList.appendChild(adGroupItem);
                         
                         // Add event listener to delete button
                         adGroupItem.querySelector('.delete-btn').addEventListener('click', (e) => {
                             e.stopPropagation();
-                            deleteAdGroup(campaignId, adGroupId);
+                            if (confirm(`Are you sure you want to delete the ad group "${adGroup.name}"?`)) {
+                                deleteAdGroup(campaignId, adGroupId);
+                            }
                         });
+                        
+                        adGroupsContainer.appendChild(adGroupItem);
                     }
+                } else {
+                    adGroupsContainer.innerHTML = '<p style="color: #666; font-size: 14px; margin: 10px 0;">No ad groups in this campaign</p>';
                 }
+                
+                campaignContainer.appendChild(adGroupsContainer);
+                campaignList.appendChild(campaignContainer);
             }
         }
         
@@ -1110,7 +2120,14 @@
                     if (result.success) {
                         displayKeywordSuggestions(result.data);
                     } else {
-                        throw new Error(result.error || 'Failed to generate keywords');
+                        // Handle specific cases
+                        if (result.reason === 'Semrush API key not configured') {
+                            const instructionText = result.instructions ? 
+                                result.instructions.steps.join('\n') : 
+                                'Please configure Semrush API key';
+                            throw new Error(`${result.message}\n\n${instructionText}`);
+                        }
+                        throw new Error(result.message || result.error || 'Failed to generate keywords');
                     }
                     
                 } catch (error) {
@@ -1127,7 +2144,130 @@
                 clearSuggestionsBtn.style.display = 'none';
             });
             
-            addKeywordsBtn.addEventListener('click', () => {
+            // Save Selected Keywords functionality
+            const saveSelectedKeywordsBtn = document.getElementById('save-selected-keywords-btn');
+            const selectAllKeywordsBtn = document.getElementById('select-all-keywords-btn');
+            const clearSelectionBtn = document.getElementById('clear-selection-btn');
+            const selectAllCheckbox = document.getElementById('select-all-checkbox');
+            
+            saveSelectedKeywordsBtn.addEventListener('click', async () => {
+                const campaignId = keywordCampaignSelect.value;
+                const adGroupId = keywordAdGroupSelect.value;
+                
+                if (!campaignId || !adGroupId) {
+                    alert('Please select a campaign and ad group first.');
+                    return;
+                }
+                
+                const selectedCheckboxes = document.querySelectorAll('.keyword-select-checkbox:checked');
+                if (selectedCheckboxes.length === 0) {
+                    alert('Please select at least one keyword to save.');
+                    return;
+                }
+                
+                const selectedKeywords = Array.from(selectedCheckboxes).map(checkbox => {
+                    return {
+                        text: checkbox.getAttribute('data-keyword'),
+                        matchType: checkbox.getAttribute('data-match-type')
+                    };
+                });
+                
+                try {
+                    // Save to local storage and Supabase
+                    if (!campaignsData[campaignId].keywords) {
+                        campaignsData[campaignId].keywords = {};
+                    }
+                    if (!campaignsData[campaignId].keywords[adGroupId]) {
+                        campaignsData[campaignId].keywords[adGroupId] = [];
+                    }
+                    
+                    // Add selected keywords to local storage
+                    selectedKeywords.forEach(kw => {
+                        campaignsData[campaignId].keywords[adGroupId].push(kw);
+                    });
+                    
+                    // Save to Supabase if enabled, otherwise localStorage
+                    if (databaseClient && databaseClient.isSupabaseEnabled) {
+                        try {
+                            const allKeywords = campaignsData[campaignId].keywords[adGroupId] || [];
+                            await databaseClient.saveKeywords(adGroupId, allKeywords);
+                            console.log('Keywords saved to Supabase successfully');
+                        } catch (error) {
+                            console.error('Error saving keywords to Supabase:', error);
+                            alert(`Keywords saved locally but failed to save to database: ${error.message}`);
+                            saveData(); // Fallback to localStorage on error
+                        }
+                    } else {
+                        saveData(); // Only save to localStorage when not using Supabase
+                    }
+                    
+                    // Update the keyword list display
+                    updateKeywordList();
+                    
+                    // Clear selections
+                    selectedCheckboxes.forEach(checkbox => checkbox.checked = false);
+                    selectAllCheckbox.checked = false;
+                    
+                    alert(`Successfully saved ${selectedKeywords.length} keywords!`);
+                    
+                } catch (error) {
+                    console.error('Error saving selected keywords:', error);
+                    alert(`Error saving keywords: ${error.message}`);
+                }
+            });
+            
+            selectAllKeywordsBtn.addEventListener('click', () => {
+                const checkboxes = document.querySelectorAll('.keyword-select-checkbox');
+                checkboxes.forEach(checkbox => checkbox.checked = true);
+                selectAllCheckbox.checked = true;
+            });
+            
+            clearSelectionBtn.addEventListener('click', () => {
+                const checkboxes = document.querySelectorAll('.keyword-select-checkbox');
+                checkboxes.forEach(checkbox => checkbox.checked = false);
+                selectAllCheckbox.checked = false;
+            });
+            
+            selectAllCheckbox.addEventListener('change', () => {
+                const checkboxes = document.querySelectorAll('.keyword-select-checkbox');
+                checkboxes.forEach(checkbox => checkbox.checked = selectAllCheckbox.checked);
+            });
+            
+            // Save Keywords to Database button
+            const saveKeywordsToDbBtn = document.getElementById('save-keywords-to-db-btn');
+            saveKeywordsToDbBtn.addEventListener('click', async () => {
+                const campaignId = keywordCampaignSelect.value;
+                const adGroupId = keywordAdGroupSelect.value;
+                
+                if (!campaignId || !adGroupId) {
+                    alert('Please select a campaign and ad group first.');
+                    return;
+                }
+                
+                if (!databaseClient || !databaseClient.isSupabaseEnabled) {
+                    alert('Database connection is not available.');
+                    return;
+                }
+                
+                const keywords = campaignsData[campaignId].keywords && 
+                                campaignsData[campaignId].keywords[adGroupId] ? 
+                                campaignsData[campaignId].keywords[adGroupId] : [];
+                
+                if (keywords.length === 0) {
+                    alert('No keywords to save for this ad group.');
+                    return;
+                }
+                
+                try {
+                    await databaseClient.saveKeywords(adGroupId, keywords);
+                    alert(`Successfully saved ${keywords.length} keywords to the database!`);
+                } catch (error) {
+                    console.error('Error saving keywords to database:', error);
+                    alert(`Error saving keywords to database: ${error.message}`);
+                }
+            });
+            
+            addKeywordsBtn.addEventListener('click', async () => {
                 const campaignId = keywordCampaignSelect.value;
                 const adGroupId = keywordAdGroupSelect.value;
                 const keywords = keywordsInput.value.trim().split('\n').filter(k => k.trim() !== '');
@@ -1152,7 +2292,7 @@
                     return;
                 }
                 
-                addKeywords(campaignId, adGroupId, keywords, matchTypes);
+                await addKeywords(campaignId, adGroupId, keywords, matchTypes);
                 keywordsInput.value = '';
             });
         }
@@ -1163,6 +2303,13 @@
 
         function displayKeywordSuggestions(data) {
             console.log('Displaying keyword suggestions:', data); // Debug log
+            
+            // Check if data is valid
+            if (!data) {
+                console.error('No data received for keyword suggestions');
+                alert('No keyword data received. Please try again.');
+                return;
+            }
             
             // Collect all keywords with their types
             allKeywordsData = [];
@@ -1208,6 +2355,13 @@
             
             allKeywordsData = uniqueKeywords;
             
+            // Check if we have any keywords after processing
+            if (allKeywordsData.length === 0) {
+                console.warn('No keywords found in data structure:', data);
+                alert('No keywords were generated. This might be due to:\n\n1. Semrush API configuration issue\n2. No relevant keywords found for your search terms\n3. API rate limits\n\nPlease check your configuration and try again.');
+                return;
+            }
+            
             // Populate the table
             populateKeywordsTable(allKeywordsData);
             
@@ -1223,7 +2377,15 @@
             keywordsTableBody.innerHTML = '';
             
             if (keywords.length === 0) {
-                keywordsTableBody.innerHTML = '<tr><td colspan="8" style="text-align: center; padding: 20px; color: #666;">No keywords found</td></tr>';
+                const noResultsRow = document.createElement('tr');
+                const noResultsCell = document.createElement('td');
+                noResultsCell.setAttribute('colspan', '9'); // Updated to 9 columns to account for checkbox
+                noResultsCell.style.textAlign = 'center';
+                noResultsCell.style.padding = '20px';
+                noResultsCell.style.color = '#666';
+                noResultsCell.textContent = 'No keywords found';
+                noResultsRow.appendChild(noResultsCell);
+                keywordsTableBody.appendChild(noResultsRow);
                 return;
             }
             
@@ -1244,18 +2406,76 @@
                         break;
                 }
                 
-                row.innerHTML = `
-                    <td><span class="keyword-type-badge ${badgeClass}">${kw.type}</span></td>
-                    <td style="font-weight: bold;">${kw.keyword}</td>
-                    <td style="text-align: right;">${kw.searchVolume ? kw.searchVolume.toLocaleString() : 'N/A'}</td>
-                    <td style="text-align: right;">$${kw.cpc ? kw.cpc.toFixed(2) : 'N/A'}</td>
-                    <td style="text-align: right;">${kw.competition ? (kw.competition * 100).toFixed(1) + '%' : 'N/A'}</td>
-                    <td style="text-align: right;">${kw.results ? kw.results.toLocaleString() : 'N/A'}</td>
-                    <td>${kw.intent || 'N/A'}</td>
-                    <td style="text-align: center;">
-                        <button class="add-keyword-btn" onclick="addKeywordToInput('${kw.keyword.replace(/'/g, "\\'")}')">Add</button>
-                    </td>
-                `;
+                // Create type cell
+                const typeCell = document.createElement('td');
+                const typeBadge = document.createElement('span');
+                typeBadge.className = `keyword-type-badge ${badgeClass}`;
+                typeBadge.textContent = kw.type || '';
+                typeCell.appendChild(typeBadge);
+                
+                // Create keyword cell
+                const keywordCell = document.createElement('td');
+                keywordCell.style.fontWeight = 'bold';
+                keywordCell.textContent = kw.keyword || '';
+                
+                // Create search volume cell
+                const searchVolumeCell = document.createElement('td');
+                searchVolumeCell.style.textAlign = 'right';
+                searchVolumeCell.textContent = kw.searchVolume ? kw.searchVolume.toLocaleString() : 'N/A';
+                
+                // Create CPC cell
+                const cpcCell = document.createElement('td');
+                cpcCell.style.textAlign = 'right';
+                cpcCell.textContent = kw.cpc ? `$${kw.cpc.toFixed(2)}` : '$N/A';
+                
+                // Create competition cell
+                const competitionCell = document.createElement('td');
+                competitionCell.style.textAlign = 'right';
+                competitionCell.textContent = kw.competition ? `${(kw.competition * 100).toFixed(1)}%` : 'N/A';
+                
+                // Create results cell
+                const resultsCell = document.createElement('td');
+                resultsCell.style.textAlign = 'right';
+                resultsCell.textContent = kw.results ? kw.results.toLocaleString() : 'N/A';
+                
+                // Create intent cell
+                const intentCell = document.createElement('td');
+                intentCell.textContent = kw.intent || 'N/A';
+                
+                // Create checkbox cell
+                const checkboxCell = document.createElement('td');
+                checkboxCell.style.textAlign = 'center';
+                const checkbox = document.createElement('input');
+                checkbox.type = 'checkbox';
+                checkbox.className = 'keyword-select-checkbox';
+                checkbox.setAttribute('data-keyword', kw.keyword || '');
+                checkbox.setAttribute('data-match-type', 'exact'); // Default match type
+                checkboxCell.appendChild(checkbox);
+                
+                // Create action cell with button
+                const actionCell = document.createElement('td');
+                actionCell.style.textAlign = 'center';
+                const addButton = document.createElement('button');
+                addButton.className = 'add-keyword-btn';
+                addButton.textContent = 'Add';
+                
+                // Add secure event listener instead of onclick
+                addButton.addEventListener('click', function() {
+                    window.addKeywordToInput(kw.keyword || '');
+                });
+                
+                actionCell.appendChild(addButton);
+                
+                // Append all cells to row
+                row.appendChild(checkboxCell);
+                row.appendChild(typeCell);
+                row.appendChild(keywordCell);
+                row.appendChild(searchVolumeCell);
+                row.appendChild(cpcCell);
+                row.appendChild(competitionCell);
+                row.appendChild(resultsCell);
+                row.appendChild(intentCell);
+                row.appendChild(actionCell);
                 
                 keywordsTableBody.appendChild(row);
             });
@@ -1369,31 +2589,55 @@
             }, 300);
         }
         
-        function addKeywords(campaignId, adGroupId, keywords, matchTypes) {
+        // Make addKeywordToInput globally accessible
+        window.addKeywordToInput = addKeywordToInput;
+        
+                async function addKeywords(campaignId, adGroupId, keywords, matchTypes) {
             if (!campaignsData[campaignId].keywords) {
                 campaignsData[campaignId].keywords = {};
             }
-            
+
             if (!campaignsData[campaignId].keywords[adGroupId]) {
                 campaignsData[campaignId].keywords[adGroupId] = [];
             }
-            
+
+            // Prepare keywords for both local storage and Supabase
+            const newKeywords = [];
             for (const keyword of keywords) {
                 for (const matchType of matchTypes) {
-                    campaignsData[campaignId].keywords[adGroupId].push({
+                    const keywordObj = {
                         text: keyword,
                         matchType: matchType
-                    });
+                    };
+                    campaignsData[campaignId].keywords[adGroupId].push(keywordObj);
+                    newKeywords.push(keywordObj);
                 }
             }
+
+            // Save to Supabase if enabled, otherwise localStorage
+            if (databaseClient && databaseClient.isSupabaseEnabled) {
+                try {
+                    // Get all keywords for this ad group (including existing ones)
+                    const allKeywords = campaignsData[campaignId].keywords[adGroupId] || [];
+                    await databaseClient.saveKeywords(adGroupId, allKeywords);
+                    console.log('Keywords saved to Supabase successfully');
+                } catch (error) {
+                    console.error('Error saving keywords to Supabase:', error);
+                    // Fallback to localStorage on error
+                    saveData();
+                    alert(`Keywords saved locally but failed to save to database: ${error.message}`);
+                }
+            } else {
+                saveData(); // Only save to localStorage when not using Supabase
+            }
             
-            saveData();
             updateKeywordList();
         }
         
-        function updateKeywordList() {
+                function updateKeywordList() {
             const campaignId = keywordCampaignSelect.value;
             const adGroupId = keywordAdGroupSelect.value;
+            const saveKeywordsToDbBtn = document.getElementById('save-keywords-to-db-btn');
             
             if (!campaignId || !adGroupId) {
                 keywordListContainer.innerHTML = `
@@ -1401,9 +2645,10 @@
                         <p>Select an ad group to view keywords</p>
                     </div>
                 `;
+                if (saveKeywordsToDbBtn) saveKeywordsToDbBtn.style.display = 'none';
                 return;
             }
-            
+
             const keywords = campaignsData[campaignId].keywords && 
                             campaignsData[campaignId].keywords[adGroupId] ? 
                             campaignsData[campaignId].keywords[adGroupId] : [];
@@ -1414,6 +2659,7 @@
                         <p>No keywords in this ad group</p>
                     </div>
                 `;
+                if (saveKeywordsToDbBtn) saveKeywordsToDbBtn.style.display = 'none';
                 return;
             }
             
@@ -1451,16 +2697,39 @@
             // Add event listeners to delete buttons
             const deleteButtons = keywordListContainer.querySelectorAll('.delete-btn');
             deleteButtons.forEach(button => {
-                button.addEventListener('click', () => {
+                button.addEventListener('click', async () => {
                     const index = parseInt(button.getAttribute('data-keyword-index'));
-                    deleteKeyword(campaignId, adGroupId, index);
+                    await deleteKeyword(campaignId, adGroupId, index);
                 });
             });
+            
+            // Show save button if there are keywords and Supabase is enabled
+            if (saveKeywordsToDbBtn) {
+                if (databaseClient && databaseClient.isSupabaseEnabled && keywords.length > 0) {
+                    saveKeywordsToDbBtn.style.display = 'inline-block';
+                } else {
+                    saveKeywordsToDbBtn.style.display = 'none';
+                }
+            }
         }
         
-        function deleteKeyword(campaignId, adGroupId, index) {
+        async function deleteKeyword(campaignId, adGroupId, index) {
             campaignsData[campaignId].keywords[adGroupId].splice(index, 1);
-            saveData();
+            
+            // Save to Supabase if enabled, otherwise localStorage
+            if (databaseClient && databaseClient.isSupabaseEnabled) {
+                try {
+                    const allKeywords = campaignsData[campaignId].keywords[adGroupId] || [];
+                    await databaseClient.saveKeywords(adGroupId, allKeywords);
+                    console.log('Keywords updated in Supabase after deletion');
+                } catch (error) {
+                    console.error('Error updating keywords in Supabase:', error);
+                    saveData(); // Fallback to localStorage on error
+                }
+            } else {
+                saveData(); // Only save to localStorage when not using Supabase
+            }
+            
             updateKeywordList();
         }
         
@@ -1472,13 +2741,15 @@
             adCampaignSelect.addEventListener('change', () => {
                 updateAdGroupSelect(adCampaignSelect.value, adGroupSelect);
                 updateAdsList();
+                updateKeywordCoverageAnalysis();
             });
             
             adGroupSelect.addEventListener('change', () => {
                 updateAdsList();
+                updateKeywordCoverageAnalysis();
             });
 
-            saveAdBtn.addEventListener('click', () => {
+            saveAdBtn.addEventListener('click', async () => {
                 const campaignId = adCampaignSelect.value;
                 const adGroupId = adGroupSelect.value;
                 
@@ -1492,49 +2763,143 @@
                     return;
                 }
                 
-                saveAd(campaignId, adGroupId);
+                await saveAd(campaignId, adGroupId);
+                updateKeywordCoverageAnalysis();
+            });
+            
+            // Keyword Coverage Analysis
+            refreshAnalysisBtn.addEventListener('click', () => {
+                updateKeywordCoverageAnalysis();
+            });
+            
+            // Monitor ad copy changes for real-time analysis
+            const adInputs = [headline1, headline2, headline3, headline4, headline5, headline6, 
+                             headline7, headline8, headline9, headline10, headline11,
+                             description1, description2, description3, description4];
+            
+            adInputs.forEach(input => {
+                input.addEventListener('input', debounce(updateKeywordCoverageAnalysis, 500));
             });
         }
         
-        function saveAd(campaignId, adGroupId) {
-            if (!campaignsData[campaignId].ads) {
-                campaignsData[campaignId].ads = {};
+        async function saveAd(campaignId, adGroupId) {
+            try {
+                // Show saving message
+                adSaveMessage.textContent = 'Saving ad...';
+                adSaveMessage.style.color = '#fbbc04';
+                
+                const adData = {
+                    ad_group_id: adGroupId,
+                    headline_1: headline1.value || null,
+                    headline_2: headline2.value || null,
+                    headline_3: headline3.value || null,
+                    headline_4: headline4.value || null,
+                    headline_5: headline5.value || null,
+                    headline_6: headline6.value || null,
+                    headline_7: headline7.value || null,
+                    headline_8: headline8.value || null,
+                    headline_9: headline9.value || null,
+                    headline_10: headline10.value || null,
+                    headline_11: headline11.value || null,
+                    description_1: description1.value || null,
+                    description_2: description2.value || null,
+                    description_3: description3.value || null,
+                    description_4: description4.value || null
+                };
+
+                if (databaseClient && databaseClient.isSupabaseEnabled) {
+                    // Save to Supabase database
+                    const savedAd = await databaseClient.createAd(adData);
+                    
+                    // Update local campaignsData for UI consistency
+                    if (!campaignsData[campaignId].ads) {
+                        campaignsData[campaignId].ads = {};
+                    }
+                    
+                    if (!campaignsData[campaignId].ads[adGroupId]) {
+                        campaignsData[campaignId].ads[adGroupId] = [];
+                    }
+                    
+                    // Add the saved ad to local data (converted from Supabase format)
+                    campaignsData[campaignId].ads[adGroupId].push({
+                        id: savedAd.id,
+                        headline1: savedAd.headline_1 || '',
+                        headline2: savedAd.headline_2 || '',
+                        headline3: savedAd.headline_3 || '',
+                        headline4: savedAd.headline_4 || '',
+                        headline5: savedAd.headline_5 || '',
+                        headline6: savedAd.headline_6 || '',
+                        headline7: savedAd.headline_7 || '',
+                        headline8: savedAd.headline_8 || '',
+                        headline9: savedAd.headline_9 || '',
+                        headline10: savedAd.headline_10 || '',
+                        headline11: savedAd.headline_11 || '',
+                        description1: savedAd.description_1 || '',
+                        description2: savedAd.description_2 || '',
+                        description3: savedAd.description_3 || '',
+                        description4: savedAd.description_4 || ''
+                    });
+                    
+                    // Show success message
+                    adSaveMessage.textContent = 'Ad saved to database successfully!';
+                    adSaveMessage.style.color = '#34a853';
+                } else {
+                    // Fallback to localStorage only (for development/offline mode)
+                    if (!campaignsData[campaignId].ads) {
+                        campaignsData[campaignId].ads = {};
+                    }
+                    
+                    if (!campaignsData[campaignId].ads[adGroupId]) {
+                        campaignsData[campaignId].ads[adGroupId] = [];
+                    }
+                    
+                    const adId = 'ad_' + Date.now();
+                    campaignsData[campaignId].ads[adGroupId].push({
+                        id: adId,
+                        headline1: headline1.value,
+                        headline2: headline2.value,
+                        headline3: headline3.value,
+                        headline4: headline4.value,
+                        headline5: headline5.value,
+                        headline6: headline6.value,
+                        headline7: headline7.value,
+                        headline8: headline8.value,
+                        headline9: headline9.value,
+                        headline10: headline10.value,
+                        headline11: headline11.value,
+                        description1: description1.value,
+                        description2: description2.value,
+                        description3: description3.value,
+                        description4: description4.value
+                    });
+                    
+                    saveData(); // Only save to localStorage when not using Supabase
+                    
+                    adSaveMessage.textContent = 'Ad saved locally!';
+                    adSaveMessage.style.color = '#34a853';
+                }
+                
+                updateAdsList();
+                
+                setTimeout(() => {
+                    adSaveMessage.textContent = '';
+                }, 3000);
+                
+                // Clear form
+                clearAdForm();
+                
+            } catch (error) {
+                console.error('Error saving ad:', error);
+                adSaveMessage.textContent = `Error saving ad: ${error.message}`;
+                adSaveMessage.style.color = '#ea4335';
+                
+                setTimeout(() => {
+                    adSaveMessage.textContent = '';
+                }, 5000);
             }
-            
-            if (!campaignsData[campaignId].ads[adGroupId]) {
-                campaignsData[campaignId].ads[adGroupId] = [];
-            }
-            
-            const adId = 'ad_' + Date.now();
-            campaignsData[campaignId].ads[adGroupId].push({
-                id: adId,
-                headline1: headline1.value,
-                headline2: headline2.value,
-                headline3: headline3.value,
-                headline4: headline4.value,
-                headline5: headline5.value,
-                headline6: headline6.value,
-                headline7: headline7.value,
-                headline8: headline8.value,
-                headline9: headline9.value,
-                headline10: headline10.value,
-                headline11: headline11.value,
-                description1: description1.value,
-                description2: description2.value,
-                description3: description3.value,
-                description4: description4.value
-            });
-            
-            saveData();
-            updateAdsList();
-            
-            // Show success message
-            adSaveMessage.textContent = 'Ad saved successfully!';
-            setTimeout(() => {
-                adSaveMessage.textContent = '';
-            }, 3000);
-            
-            // Clear form
+        }
+
+        function clearAdForm() {
             headline1.value = '';
             headline2.value = '';
             headline3.value = '';
@@ -1639,17 +3004,289 @@
             // Add event listeners to delete buttons
             const deleteButtons = adsListContainer.querySelectorAll('.delete-btn');
             deleteButtons.forEach(button => {
-                button.addEventListener('click', () => {
+                button.addEventListener('click', async () => {
                     const index = parseInt(button.getAttribute('data-ad-index'));
-                    deleteAd(campaignId, adGroupId, index);
+                    await deleteAd(campaignId, adGroupId, index);
                 });
             });
         }
         
-        function deleteAd(campaignId, adGroupId, index) {
+        async function deleteAd(campaignId, adGroupId, index) {
             campaignsData[campaignId].ads[adGroupId].splice(index, 1);
-            saveData();
+            
+            // Save to Supabase if enabled, otherwise localStorage
+            if (databaseClient && databaseClient.isSupabaseEnabled) {
+                // TODO: Implement deleteAd API call to Supabase
+                // For now, we'll just update the local data
+                console.log('Ad deleted locally - Supabase ad deletion API not yet implemented');
+                // Note: You would need to add a deleteAd method to database_client.js and server.js
+            } else {
+                saveData(); // Only save to localStorage when not using Supabase
+            }
+            
             updateAdsList();
+            updateKeywordCoverageAnalysis();
+        }
+        
+        // Keyword Coverage Analysis Variables
+        let coverageChart = null;
+        
+        // Keyword Coverage Analysis Functions
+        function updateKeywordCoverageAnalysis() {
+            const campaignId = adCampaignSelect.value;
+            const adGroupId = adGroupSelect.value;
+            
+            if (!campaignId || !adGroupId) {
+                keywordCoverageAnalysis.style.display = 'none';
+                return;
+            }
+            
+            // Get current ad copy
+            const currentAdCopy = getCurrentAdCopy();
+            
+            // Get saved keywords for this ad group
+            const savedKeywords = getSavedKeywords(campaignId, adGroupId);
+            
+            if (savedKeywords.length === 0) {
+                keywordCoverageAnalysis.style.display = 'none';
+                return;
+            }
+            
+            // Show the analysis section
+            keywordCoverageAnalysis.style.display = 'block';
+            
+            // Perform keyword coverage analysis
+            const analysis = analyzeKeywordCoverage(currentAdCopy, savedKeywords);
+            
+            // Update UI with analysis results
+            displayCoverageResults(analysis);
+        }
+        
+        function getCurrentAdCopy() {
+            return {
+                headlines: [
+                    headline1.value, headline2.value, headline3.value, headline4.value,
+                    headline5.value, headline6.value, headline7.value, headline8.value,
+                    headline9.value, headline10.value, headline11.value
+                ].filter(h => h.trim() !== ''),
+                descriptions: [
+                    description1.value, description2.value, description3.value, description4.value
+                ].filter(d => d.trim() !== '')
+            };
+        }
+        
+        function getSavedKeywords(campaignId, adGroupId) {
+            if (!campaignsData[campaignId] || !campaignsData[campaignId].keywords || 
+                !campaignsData[campaignId].keywords[adGroupId]) {
+                return [];
+            }
+            
+            return campaignsData[campaignId].keywords[adGroupId];
+        }
+        
+        function analyzeKeywordCoverage(adCopy, keywords) {
+            const allAdText = [...adCopy.headlines, ...adCopy.descriptions].join(' ').toLowerCase();
+            
+            let coveredCount = 0;
+            let partialCount = 0;
+            let missingCount = 0;
+            
+            const keywordDetails = keywords.map(keyword => {
+                const keywordText = keyword.text.toLowerCase();
+                const keywordWords = keywordText.split(' ');
+                
+                // Check for exact keyword match
+                if (allAdText.includes(keywordText)) {
+                    coveredCount++;
+                    return {
+                        keyword: keyword.text,
+                        matchType: keyword.matchType,
+                        status: 'covered',
+                        coverage: 100,
+                        foundIn: findKeywordInSections(keyword.text, adCopy)
+                    };
+                }
+                
+                // Check for partial match (individual words)
+                let matchedWords = 0;
+                keywordWords.forEach(word => {
+                    if (allAdText.includes(word.toLowerCase())) {
+                        matchedWords++;
+                    }
+                });
+                
+                const coveragePercentage = Math.round((matchedWords / keywordWords.length) * 100);
+                
+                if (coveragePercentage >= 50) {
+                    partialCount++;
+                    return {
+                        keyword: keyword.text,
+                        matchType: keyword.matchType,
+                        status: 'partial',
+                        coverage: coveragePercentage,
+                        foundIn: findKeywordInSections(keyword.text, adCopy)
+                    };
+                } else {
+                    missingCount++;
+                    return {
+                        keyword: keyword.text,
+                        matchType: keyword.matchType,
+                        status: 'missing',
+                        coverage: coveragePercentage,
+                        foundIn: []
+                    };
+                }
+            });
+            
+            const totalKeywords = keywords.length;
+            const overallCoverage = Math.round(((coveredCount + (partialCount * 0.5)) / totalKeywords) * 100);
+            
+            return {
+                totalKeywords,
+                coveredCount,
+                partialCount,
+                missingCount,
+                overallCoverage,
+                keywordDetails
+            };
+        }
+        
+        function findKeywordInSections(keyword, adCopy) {
+            const foundIn = [];
+            const keywordLower = keyword.toLowerCase();
+            
+            // Check headlines
+            adCopy.headlines.forEach((headline, index) => {
+                if (headline.toLowerCase().includes(keywordLower)) {
+                    foundIn.push(`Headline ${index + 1}`);
+                }
+            });
+            
+            // Check descriptions
+            adCopy.descriptions.forEach((description, index) => {
+                if (description.toLowerCase().includes(keywordLower)) {
+                    foundIn.push(`Description ${index + 1}`);
+                }
+            });
+            
+            return foundIn;
+        }
+        
+        function displayCoverageResults(analysis) {
+            // Update main metrics
+            coverageScore.textContent = `Coverage: ${analysis.overallCoverage}%`;
+            totalKeywordsEl.textContent = analysis.totalKeywords;
+            coveredKeywordsEl.textContent = analysis.coveredCount;
+            partialKeywordsEl.textContent = analysis.partialCount;
+            missingKeywordsEl.textContent = analysis.missingCount;
+            
+            // Update the coverage score color based on performance
+            coverageScore.className = 'coverage-score';
+            if (analysis.overallCoverage >= 80) {
+                coverageScore.style.background = 'linear-gradient(135deg, #4caf50, #81c784)';
+            } else if (analysis.overallCoverage >= 60) {
+                coverageScore.style.background = 'linear-gradient(135deg, #ff9800, #ffb74d)';
+            } else {
+                coverageScore.style.background = 'linear-gradient(135deg, #f44336, #e57373)';
+            }
+            
+            // Update keyword coverage list
+            displayKeywordDetails(analysis.keywordDetails);
+            
+            // Update chart
+            updateCoverageChart(analysis);
+        }
+        
+        function displayKeywordDetails(keywordDetails) {
+            let html = '';
+            
+            keywordDetails.forEach(detail => {
+                const statusClass = `keyword-${detail.status}`;
+                const statusText = detail.status === 'covered' ? 'Fully Covered' : 
+                                 detail.status === 'partial' ? `Partial (${detail.coverage}%)` : 'Not Covered';
+                const statusBadgeClass = `status-${detail.status}`;
+                
+                let foundInText = '';
+                if (detail.foundIn.length > 0) {
+                    foundInText = ` - Found in: ${detail.foundIn.join(', ')}`;
+                }
+                
+                html += `
+                    <div class="keyword-coverage-item ${statusClass}">
+                        <div>
+                            <strong>${detail.keyword}</strong>
+                            <span class="badge badge-${detail.matchType}">${detail.matchType}</span>
+                            ${foundInText}
+                        </div>
+                        <span class="coverage-status ${statusBadgeClass}">${statusText}</span>
+                    </div>
+                `;
+            });
+            
+            keywordCoverageList.innerHTML = html;
+        }
+        
+        function updateCoverageChart(analysis) {
+            const ctx = document.getElementById('coverage-chart').getContext('2d');
+            
+            // Destroy existing chart if it exists
+            if (coverageChart) {
+                coverageChart.destroy();
+            }
+            
+            coverageChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Fully Covered', 'Partially Covered', 'Not Covered'],
+                    datasets: [{
+                        data: [analysis.coveredCount, analysis.partialCount, analysis.missingCount],
+                        backgroundColor: ['#4caf50', '#ff9800', '#f44336'],
+                        borderWidth: 2,
+                        borderColor: '#fff'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                padding: 15,
+                                usePointStyle: true,
+                                font: {
+                                    size: 12
+                                }
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    const label = context.label || '';
+                                    const value = context.parsed;
+                                    const total = analysis.totalKeywords;
+                                    const percentage = Math.round((value / total) * 100);
+                                    return `${label}: ${value} (${percentage}%)`;
+                                }
+                            }
+                        }
+                    },
+                    cutout: '50%'
+                }
+            });
+        }
+        
+        // Utility function for debouncing
+        function debounce(func, wait) {
+            let timeout;
+            return function executedFunction(...args) {
+                const later = () => {
+                    clearTimeout(timeout);
+                    func(...args);
+                };
+                clearTimeout(timeout);
+                timeout = setTimeout(later, wait);
+            };
         }
         
         // Export
@@ -1761,7 +3398,7 @@
             const clientInfo = getClientInfo();
             
             // CSV Header for ads
-            let csv = 'Campaign,Ad Group,Headline 1,Headline 2,Headline 3,Headline 4,Headline 5,Headline 6,Headline 7,Headline 8,Headline 9,Headline 10,Headline 11,Description 1,Description 2,Description 3,Description 4,Path 1,Path 2,Final URL\n';
+            let csv = 'Campaign,Ad Group,Headline 1,Headline 2,Headline 3,Headline 4,Headline 5,Headline 6,Headline 7,Headline 8,Headline 9,Headline 10,Headline 11,Description 1,Description 2,Description 3,Description 4,Final URL\n';
             
             // Process each ad group
             for (const adGroupId in campaign.adGroups) {
@@ -1771,7 +3408,7 @@
                 // Process ads
                 const ads = campaign.ads && campaign.ads[adGroupId] ? campaign.ads[adGroupId] : [];
                 for (const ad of ads) {
-                    csv += `"${campaign.name}","${adGroupName}","${ad.headline1 || ''}","${ad.headline2 || ''}","${ad.headline3 || ''}","${ad.headline4 || ''}","${ad.headline5 || ''}","${ad.headline6 || ''}","${ad.headline7 || ''}","${ad.headline8 || ''}","${ad.headline9 || ''}","${ad.headline10 || ''}","${ad.headline11 || ''}","${ad.description1 || ''}","${ad.description2 || ''}","${ad.description3 || ''}","${ad.description4 || ''}","${ad.path1 || ''}","${ad.path2 || ''}","${clientInfo.websiteUrl || ''}"\n`;
+                    csv += `"${campaign.name}","${adGroupName}","${ad.headline1 || ''}","${ad.headline2 || ''}","${ad.headline3 || ''}","${ad.headline4 || ''}","${ad.headline5 || ''}","${ad.headline6 || ''}","${ad.headline7 || ''}","${ad.headline8 || ''}","${ad.headline9 || ''}","${ad.headline10 || ''}","${ad.headline11 || ''}","${ad.description1 || ''}","${ad.description2 || ''}","${ad.description3 || ''}","${ad.description4 || ''}","${clientInfo.websiteUrl || ''}"\n`;
                 }
             }
             
@@ -1803,64 +3440,188 @@
             const campaign = campaignsData[campaignId];
             const clientInfo = getClientInfo();
             
-            // CSV Header
-            let csv = 'Campaign,Ad Group,Headline 1,Headline 2,Headline 3,Headline 4,Headline 5,Headline 6,Headline 7,Headline 8,Headline 9,Headline 10,Headline 11,Description 1,Description 2,Description 3,Description 4,Path 1,Path 2,Final URL,Keyword,Match Type\n';
+            // CSV Header - removed Path 1 and Path 2 columns that don't exist
+            let csv = 'Campaign,Ad Group,Headline 1,Headline 2,Headline 3,Headline 4,Headline 5,Headline 6,Headline 7,Headline 8,Headline 9,Headline 10,Headline 11,Description 1,Description 2,Description 3,Description 4,Final URL,Keyword,Match Type\n';
             
             // Process each ad group
             for (const adGroupId in campaign.adGroups) {
                 const adGroup = campaign.adGroups[adGroupId];
                 const adGroupName = adGroup.name;
                 
-                // Process ads
+                // Process ads - removed references to path1 and path2
                 const ads = campaign.ads && campaign.ads[adGroupId] ? campaign.ads[adGroupId] : [];
                 for (const ad of ads) {
-                    csv += `"${campaign.name}","${adGroupName}","${ad.headline1}","${ad.headline2}","${ad.headline3}","${ad.headline4}","${ad.headline5}","${ad.headline6}","${ad.headline7}","${ad.headline8}","${ad.headline9}","${ad.headline10}","${ad.headline11}","${ad.description1}","${ad.description2}","${ad.description3}","${ad.description4}","${ad.path1}","${ad.path2}","${clientInfo.websiteUrl}",,\n`;
+                    csv += `"${campaign.name}","${adGroupName}","${ad.headline1 || ''}","${ad.headline2 || ''}","${ad.headline3 || ''}","${ad.headline4 || ''}","${ad.headline5 || ''}","${ad.headline6 || ''}","${ad.headline7 || ''}","${ad.headline8 || ''}","${ad.headline9 || ''}","${ad.headline10 || ''}","${ad.headline11 || ''}","${ad.description1 || ''}","${ad.description2 || ''}","${ad.description3 || ''}","${ad.description4 || ''}","${clientInfo.websiteUrl || ''}",,\n`;
                 }
                 
-                // Process keywords
+                // Process keywords - fixed column alignment (17 empty columns total: 2 campaign/adgroup + 11 headlines + 4 descriptions + 1 final URL = 18 columns before keyword)
                 const keywords = campaign.keywords && campaign.keywords[adGroupId] ? campaign.keywords[adGroupId] : [];
                 for (const keyword of keywords) {
-                    csv += `"${campaign.name}","${adGroupName}",,,,,,,,,,,,"${clientInfo.websiteUrl}","${keyword.text}","${keyword.matchType}"\n`;
+                    csv += `"${campaign.name}","${adGroupName}",,,,,,,,,,,,,,,,,"${clientInfo.websiteUrl || ''}","${keyword.text}","${keyword.matchType}"\n`;
                 }
             }
             
             return csv;
         }
         
-        // Character Counters
+        // Enhanced Character Counters with Quality Feedback
         function setupCharacterCounters() {
-            headline1.addEventListener('input', () => updateCharacterCount(headline1, headline1Count));
-            headline2.addEventListener('input', () => updateCharacterCount(headline2, headline2Count));
-            headline3.addEventListener('input', () => updateCharacterCount(headline3, headline3Count));
-            headline4.addEventListener('input', () => updateCharacterCount(headline4, headline4Count));
-            headline5.addEventListener('input', () => updateCharacterCount(headline5, headline5Count));
-            headline6.addEventListener('input', () => updateCharacterCount(headline6, headline6Count));
-            headline7.addEventListener('input', () => updateCharacterCount(headline7, headline7Count));
-            headline8.addEventListener('input', () => updateCharacterCount(headline8, headline8Count));
-            headline9.addEventListener('input', () => updateCharacterCount(headline9, headline9Count));
-            headline10.addEventListener('input', () => updateCharacterCount(headline10, headline10Count));
-            headline11.addEventListener('input', () => updateCharacterCount(headline11, headline11Count));
-            description1.addEventListener('input', () => updateCharacterCount(description1, description1Count));
-            description2.addEventListener('input', () => updateCharacterCount(description2, description2Count));
-            description3.addEventListener('input', () => updateCharacterCount(description3, description3Count));
-            description4.addEventListener('input', () => updateCharacterCount(description4, description4Count));
+            // Setup for all headline inputs
+            for (let i = 1; i <= 11; i++) {
+                const input = document.getElementById(`headline${i}`);
+                const counter = document.getElementById(`headline${i}-count`);
+                if (input && counter) {
+                    input.addEventListener('input', () => updateHeadlineQuality(input, counter, i));
+                    // Initialize
+                    updateHeadlineQuality(input, counter, i);
+                }
+            }
             
-            // Initialize counts
-            updateCharacterCount(headline1, headline1Count);
-            updateCharacterCount(headline2, headline2Count);
-            updateCharacterCount(headline3, headline3Count);
-            updateCharacterCount(headline4, headline4Count);
-            updateCharacterCount(headline5, headline5Count);
-            updateCharacterCount(headline6, headline6Count);
-            updateCharacterCount(headline7, headline7Count);
-            updateCharacterCount(headline8, headline8Count);
-            updateCharacterCount(headline9, headline9Count);
-            updateCharacterCount(headline10, headline10Count);
-            updateCharacterCount(headline11, headline11Count);
-            updateCharacterCount(description1, description1Count);
-            updateCharacterCount(description2, description2Count);
-            updateCharacterCount(description3, description3Count);
-            updateCharacterCount(description4, description4Count);
+            // Setup for description inputs
+            for (let i = 1; i <= 4; i++) {
+                const input = document.getElementById(`description${i}`);
+                const counter = document.getElementById(`description${i}-count`);
+                if (input && counter) {
+                    input.addEventListener('input', () => updateCharacterCount(input, counter));
+                    updateCharacterCount(input, counter);
+                }
+            }
+        }
+        
+        function updateHeadlineQuality(inputElement, countElement, headlineNumber) {
+            const maxLength = parseInt(inputElement.getAttribute('maxlength'));
+            const currentLength = inputElement.value.length;
+            const text = inputElement.value;
+            
+            // Calculate quality score
+            const quality = scoreHeadlineQuality(text, maxLength);
+            
+            // Update counter display
+            let displayText = `${currentLength}/${maxLength}`;
+            let color = '#666';
+            
+            // Length-based coloring
+            if (currentLength >= maxLength) {
+                color = '#ea4335'; // Red for at limit
+            } else if (currentLength >= maxLength * 0.9) {
+                color = '#34a853'; // Green for optimal range
+            } else if (currentLength >= maxLength * 0.8) {
+                color = '#fbbc04'; // Yellow for good range
+            } else if (currentLength > 0) {
+                color = '#ea4335'; // Red for too short
+            }
+            
+            // Add quality indicators
+            if (text.length > 0) {
+                const warnings = getHeadlineWarnings(text, maxLength);
+                if (warnings.length > 0) {
+                    displayText += ` ⚠️`;
+                    color = '#ea4335';
+                } else if (quality >= 80) {
+                    displayText += ` ✅`;
+                } else if (quality >= 60) {
+                    displayText += ` ⚡`;
+                }
+            }
+            
+            countElement.textContent = displayText;
+            countElement.style.color = color;
+            
+            // Add quality tooltip
+            const warnings = getHeadlineWarnings(text, maxLength);
+            if (warnings.length > 0) {
+                countElement.title = `Issues: ${warnings.join(', ')}`;
+            } else {
+                countElement.title = `Quality Score: ${quality}/100`;
+            }
+        }
+        
+        function scoreHeadlineQuality(text, maxLength) {
+            if (!text) return 0;
+            
+            let score = 0;
+            const length = text.length;
+            
+            // Length optimization (25-30 chars optimal)
+            if (length >= 25 && length <= 30) {
+                score += 30;
+            } else if (length >= 20 && length < 25) {
+                score += 15;
+            } else if (length > 30) {
+                score -= 20;
+            }
+            
+            // Word count (3-5 words optimal)
+            const wordCount = text.split(' ').filter(w => w.length > 0).length;
+            if (wordCount >= 3 && wordCount <= 5) {
+                score += 25;
+            } else if (wordCount === 2 || wordCount === 6) {
+                score += 10;
+            }
+            
+            // Power words
+            const powerWords = ['luxury', 'premium', 'new', 'available', 'now', 'today'];
+            const powerWordCount = powerWords.filter(word => 
+                text.toLowerCase().includes(word)
+            ).length;
+            score += powerWordCount * 10;
+            
+            // Brand relevance
+            const brandTerms = ['aero', 'apartments', 'san diego'];
+            const brandCount = brandTerms.filter(term => 
+                text.toLowerCase().includes(term)
+            ).length;
+            score += brandCount * 15;
+            
+            // Avoid common truncation patterns
+            const truncationIssues = getHeadlineWarnings(text, maxLength);
+            score -= truncationIssues.length * 15;
+            
+            return Math.max(0, Math.min(100, score));
+        }
+        
+        function getHeadlineWarnings(text, maxLength) {
+            const warnings = [];
+            
+            // Check for incomplete words
+            const incompletePhrases = [
+                'Prime Locat', 'Luxury Apart', 'High Luxu', 'Comp Pricing',
+                'Essential Amenit', 'Amenities Galore in Aero Apts'
+            ];
+            
+            for (const phrase of incompletePhrases) {
+                if (text.includes(phrase)) {
+                    warnings.push('Incomplete phrase detected');
+                    break;
+                }
+            }
+            
+            // Check if ends with incomplete word
+            if (text.length === maxLength) {
+                const words = text.split(' ');
+                const lastWord = words[words.length - 1];
+                if (lastWord.length < 4 && !/[aeiou]/i.test(lastWord)) {
+                    warnings.push('May end with incomplete word');
+                }
+            }
+            
+            // Check for trailing punctuation issues
+            if (text.endsWith(',') || text.endsWith(' ')) {
+                warnings.push('Trailing punctuation/space');
+            }
+            
+            // Too short warning
+            if (text.length > 0 && text.length < maxLength * 0.8) {
+                warnings.push('Too short - add more content');
+            }
+            
+            // No brand terms
+            const brandTerms = ['aero', 'apartment', 'san diego', 'luxury'];
+            if (!brandTerms.some(term => text.toLowerCase().includes(term))) {
+                warnings.push('Consider adding brand/location terms');
+            }
+            
+            return warnings;
         }
         
         function updateCharacterCount(inputElement, countElement) {
@@ -1917,9 +3678,42 @@
             }
         }
         
-        function saveClientInfo() {
-            const clientInfo = getClientInfo();
-            localStorage.setItem('clientInfo', JSON.stringify(clientInfo));
+        async function saveClientInfo(isAutoSave = false) {
+            try {
+                if (!isAutoSave) {
+                    showSaveStatus('Saving...', 'loading');
+                }
+                
+                const clientInfo = getClientInfo();
+                
+                // Validate required fields
+                if (!clientInfo.clientName || !clientInfo.websiteUrl || !clientInfo.industry || !clientInfo.targetAudience) {
+                    showSaveStatus('Please fill in all required fields', 'error');
+                    return;
+                }
+                
+                const result = await databaseClient.saveClientInfo(clientInfo);
+                
+                if (result.success) {
+                    if (result.mode === 'supabase') {
+                        if (result.action === 'created') {
+                            showSaveStatus('Client created successfully!', 'success');
+                            await loadClientsDropdown(); // Refresh dropdown
+                            clientSelector.value = databaseClient.currentClientId;
+                        } else {
+                            showSaveStatus(isAutoSave ? 'Auto-saved' : 'Client updated successfully!', 'success');
+                        }
+                        updateCurrentClientIndicator();
+                    } else {
+                        showSaveStatus('Saved locally (Supabase unavailable)', 'warning');
+                    }
+                } else {
+                    showSaveStatus(`Error: ${result.error}`, 'error');
+                }
+            } catch (error) {
+                console.error('Error saving client info:', error);
+                showSaveStatus(`Error saving: ${error.message}`, 'error');
+            }
         }
         
         function getClientInfo() {
@@ -1935,6 +3729,19 @@
                 callToAction: callToAction.value,
                 budget: budget.value
             };
+        }
+
+        function updateClientInfoForm(clientInfo) {
+            if (clientName) clientName.value = clientInfo.clientName || '';
+            if (websiteUrl) websiteUrl.value = clientInfo.websiteUrl || '';
+            if (industry) industry.value = clientInfo.industry || '';
+            if (targetAudience) targetAudience.value = clientInfo.targetAudience || '';
+            if (geographicTargeting) geographicTargeting.value = clientInfo.geographicTargeting || '';
+            if (uniqueSellingPoints) uniqueSellingPoints.value = clientInfo.uniqueSellingPoints || '';
+            if (competitors) competitors.value = clientInfo.competitors || '';
+            if (brandVoice) brandVoice.value = clientInfo.brandVoice || '';
+            if (callToAction) callToAction.value = clientInfo.callToAction || '';
+            if (budget) budget.value = clientInfo.budget || '';
         }
         
         function loadClientInfo() {
@@ -1959,37 +3766,206 @@
             localStorage.setItem('campaignsData', JSON.stringify(campaignsData));
         }
         
-        function loadData() {
+        async function loadData() {
+            // Try to load from Supabase first, fallback to localStorage
+            if (databaseClient && databaseClient.isSupabaseEnabled && databaseClient.currentClientId) {
+                try {
+                    console.log('Loading data from Supabase...');
+                    await loadCampaignsForCurrentClient();
+                    console.log('Data loaded from Supabase successfully');
+                    return;
+                } catch (error) {
+                    console.error('Error loading from Supabase, falling back to localStorage:', error);
+                }
+            }
+            
+            // Fallback to localStorage
             const savedCampaignsData = localStorage.getItem('campaignsData');
             if (savedCampaignsData) {
                 campaignsData = JSON.parse(savedCampaignsData);
                 window.campaignsData = campaignsData; // Update global reference
+                console.log('Data loaded from localStorage');
+            } else {
+                console.log('No data found in localStorage');
             }
             
-            loadClientInfo();
+            // Only load client info from localStorage if not using Supabase
+            if (!databaseClient || !databaseClient.isSupabaseEnabled) {
+                loadClientInfo();
+            }
         }
         
-        // Add a function to show a note if unit type campaign is selected
+        // Add a function to show a note based on campaign type
         function showUnitTypeNote() {
             const campaignId = keywordCampaignSelect.value;
-            const noteId = 'unit-type-note';
+            const noteId = 'campaign-type-note';
             let note = document.getElementById(noteId);
-            if (campaignId && campaignsData[campaignId] && campaignsData[campaignId].isUnitType) {
-                if (!note) {
-                    note = document.createElement('div');
-                    note.id = noteId;
+            
+            // Remove existing note
+            if (note) note.remove();
+            
+            if (campaignId && campaignsData[campaignId]) {
+                const campaign = campaignsData[campaignId];
+                note = document.createElement('div');
+                note.id = noteId;
+                note.style.padding = '10px';
+                note.style.margin = '10px 0';
+                note.style.borderRadius = '4px';
+                
+                if (campaign.isUnitType) {
                     note.style.background = '#fffbe6';
                     note.style.border = '1px solid #ffe58f';
-                    note.style.padding = '10px';
-                    note.style.margin = '10px 0';
-                    note.style.borderRadius = '4px';
                     note.style.color = '#ad8b00';
                     note.innerHTML = '<b>Unit Type Campaign:</b> Keyword generation will be strictly based on the ad group name (e.g., "Three Bedroom Homes").';
-                    keywordCampaignSelect.parentElement.parentElement.insertBefore(note, keywordCampaignSelect.parentElement.nextSibling);
+                } else {
+                    note.style.background = '#e8f5e8';
+                    note.style.border = '1px solid #4caf50';
+                    note.style.color = '#2e7d32';
+                    note.innerHTML = '<b>General Search Campaign:</b> Keyword generation will focus on location-based terms covering Location, New Apts, Near, and Access To classifications. The "Location" ad group has been automatically created.';
                 }
-            } else {
-                if (note) note.remove();
+                
+                keywordCampaignSelect.parentElement.parentElement.insertBefore(note, keywordCampaignSelect.parentElement.nextSibling);
             }
+        }
+        
+        // Optimize Headlines Functionality
+        function optimizeExistingHeadlines() {
+            const optimizationFeedback = document.getElementById('optimization-feedback');
+            const optimizationDetails = document.getElementById('optimization-details');
+            
+            let optimizedCount = 0;
+            let improvements = [];
+            
+            // Process all 11 headlines
+            for (let i = 1; i <= 11; i++) {
+                const input = document.getElementById(`headline${i}`);
+                if (input && input.value.trim()) {
+                    const original = input.value.trim();
+                    const optimized = optimizeHeadlineText(original);
+                    
+                    if (optimized !== original) {
+                        input.value = optimized;
+                        optimizedCount++;
+                        improvements.push({
+                            number: i,
+                            original: original,
+                            optimized: optimized,
+                            score: scoreHeadlineQuality(optimized, 30)
+                        });
+                        
+                        // Trigger input event to update character count
+                        const event = new Event('input', { bubbles: true });
+                        input.dispatchEvent(event);
+                    }
+                }
+            }
+            
+            // Show feedback
+            if (optimizedCount > 0) {
+                let feedbackHTML = `<p><strong>Optimized ${optimizedCount} headlines:</strong></p><ul>`;
+                improvements.forEach(improvement => {
+                    feedbackHTML += `<li><strong>Headline ${improvement.number}:</strong><br>
+                        Before: "${improvement.original}" (${improvement.original.length} chars)<br>
+                        After: "${improvement.optimized}" (${improvement.optimized.length} chars) - Quality: ${improvement.score}/100
+                    </li>`;
+                });
+                feedbackHTML += '</ul>';
+                
+                optimizationDetails.innerHTML = feedbackHTML;
+                optimizationFeedback.style.display = 'block';
+                optimizationFeedback.style.backgroundColor = '#e8f5e8';
+                optimizationFeedback.style.border = '1px solid #4caf50';
+                optimizationFeedback.style.color = '#2e7d32';
+                
+                // Auto-hide after 10 seconds
+                setTimeout(() => {
+                    optimizationFeedback.style.display = 'none';
+                }, 10000);
+            } else {
+                optimizationDetails.innerHTML = '<p>All headlines are already optimized! ✅</p>';
+                optimizationFeedback.style.display = 'block';
+                optimizationFeedback.style.backgroundColor = '#e3f2fd';
+                optimizationFeedback.style.border = '1px solid #2196f3';
+                optimizationFeedback.style.color = '#1565c0';
+                
+                // Auto-hide after 5 seconds
+                setTimeout(() => {
+                    optimizationFeedback.style.display = 'none';
+                }, 5000);
+            }
+        }
+        
+        function optimizeHeadlineText(text) {
+            if (!text || text.length <= 30) return text;
+            
+            let optimized = text.trim();
+            
+            // Phase 1: Smart abbreviations
+            const abbreviations = {
+                'Apartments': 'Apts',
+                'Apartment': 'Apt',
+                'Location': 'Loc',
+                'Available': 'Avail',
+                'Premium': 'Prime',
+                'Luxury': 'Lux',
+                'Amenities': 'Amenit',
+                'Technology': 'Tech',
+                'Construction': 'Const',
+                'Competitive': 'Comp',
+                'Essential': 'Key'
+            };
+            
+            for (const [full, abbr] of Object.entries(abbreviations)) {
+                if (optimized.includes(full)) {
+                    const candidate = optimized.replace(new RegExp(full, 'gi'), abbr);
+                    if (candidate.length <= 30) {
+                        optimized = candidate;
+                        break;
+                    }
+                }
+            }
+            
+            // Phase 2: Smart word replacements
+            const replacements = {
+                'Prime Locat': 'Prime Loc',
+                'Luxury Apart': 'Luxury Apts',
+                'High Luxu': 'High Luxury',
+                'Comp Pricing': 'Great Price',
+                'Essential Amenit': 'Key Amenities',
+                'Amenities Galore in Aero Apts': 'Many Amenities at Aero',
+                'Competitive Pricing, High Luxu': 'Great Price, Luxury'
+            };
+            
+            for (const [broken, fixed] of Object.entries(replacements)) {
+                if (optimized.includes(broken)) {
+                    optimized = optimized.replace(broken, fixed);
+                    break;
+                }
+            }
+            
+            // Phase 3: If still too long, smart truncation
+            if (optimized.length > 30) {
+                const words = optimized.split(' ');
+                let result = '';
+                
+                for (const word of words) {
+                    const candidate = result + (result ? ' ' : '') + word;
+                    if (candidate.length <= 30) {
+                        result = candidate;
+                    } else {
+                        break;
+                    }
+                }
+                
+                optimized = result || optimized.substring(0, 30).trim();
+            }
+            
+            return optimized;
+        }
+        
+        // Add event listener for optimize button
+        if (optimizeHeadlinesBtn) {
+            optimizeHeadlinesBtn.addEventListener('click', optimizeExistingHeadlines);
         }
         
         // Initialize the application
