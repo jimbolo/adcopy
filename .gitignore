@@ -104,4 +104,6 @@ Thumbs.db
 
 # Logs
 logs
-*.log 
+*.log
+
+supabase/
