@@ -428,6 +428,24 @@ class DatabaseClient {
     }
   }
 
+  async deleteAdGroup(adGroupId) {
+    try {
+      const response = await fetch(
+        `${this.apiBaseUrl}/api/ad-groups/${adGroupId}`,
+        {
+          method: "DELETE",
+        }
+      );
+      if (!response.ok) {
+        throw new Error("Failed to delete ad group");
+      }
+      return true;
+    } catch (error) {
+      console.error("Error deleting ad group:", error);
+      throw error;
+    }
+  }
+
   // Keyword operations
   async saveKeywords(adGroupId, keywords) {
     try {
@@ -473,6 +491,21 @@ class DatabaseClient {
       return result.data;
     } catch (error) {
       console.error("Error creating ad:", error);
+      throw error;
+    }
+  }
+
+  async deleteAd(adId) {
+    try {
+      const response = await fetch(`${this.apiBaseUrl}/api/ads/${adId}`, {
+        method: "DELETE",
+      });
+      if (!response.ok) {
+        throw new Error("Failed to delete ad");
+      }
+      return true;
+    } catch (error) {
+      console.error("Error deleting ad:", error);
       throw error;
     }
   }
