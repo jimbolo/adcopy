@@ -3137,7 +3137,7 @@
                         <div class="keyword-item">
                             <div><strong>Description 4:</strong> ${ad.description4 || 'N/A'}</div>
                         </div>
-                        <button class="delete-btn" data-ad-index="${i}">Delete Ad</button>
+                        <button class="delete-btn" data-ad-id="${ad.id}">Delete Ad</button>
                     </div>
                 `;
             }
@@ -3148,8 +3148,8 @@
             const deleteButtons = adsListContainer.querySelectorAll('.delete-btn');
             deleteButtons.forEach(button => {
                 button.addEventListener('click', async () => {
-                    const index = parseInt(button.getAttribute('data-ad-index'));
-                    await deleteAd(campaignId, adGroupId, index);
+                    const adId = button.getAttribute('data-ad-id');
+                    await deleteAd(campaignId, adGroupId, adId);
                 });
             });
         }
@@ -3157,10 +3157,17 @@
         async function deleteAd(campaignId, adGroupId, index) {
             if (databaseClient && databaseClient.isSupabaseEnabled) {
                 if (confirm('WARNING: Deleting this ad will remove it permanently. Proceed?')) {
-                    const ad = campaignsData[campaignId].ads[adGroupId][index];
+                    // Find ad index by UUID
+                    const adsArr = campaignsData[campaignId].ads[adGroupId];
+                    const adIndex = adsArr.findIndex(ad => ad.id === index);
+                    if (adIndex === -1) {
+                        alert('Ad not found.');
+                        return;
+                    }
+                    const ad = adsArr[adIndex];
                     databaseClient.deleteAd(ad.id)
                         .then(() => {
-                            campaignsData[campaignId].ads[adGroupId].splice(index, 1);
+                            adsArr.splice(adIndex, 1);
                             updateAdsList();
                             updateKeywordCoverageAnalysis();
                         })
@@ -3170,7 +3177,14 @@
                 }
             } else {
                 if (confirm('WARNING: Deleting this ad will remove it permanently. Proceed?')) {
-                    campaignsData[campaignId].ads[adGroupId].splice(index, 1);
+                    // Find ad index by UUID
+                    const adsArr = campaignsData[campaignId].ads[adGroupId];
+                    const adIndex = adsArr.findIndex(ad => ad.id === index);
+                    if (adIndex === -1) {
+                        alert('Ad not found.');
+                        return;
+                    }
+                    adsArr.splice(adIndex, 1);
                     saveData(); // Only save to localStorage when not using Supabase
                     updateAdsList();
                     updateKeywordCoverageAnalysis();

@@ -566,6 +566,7 @@ class DatabaseClient {
             if (adGroup.ads) {
               campaignsData[campaignId].ads[adGroupId] = adGroup.ads.map(
                 (ad) => ({
+                  id: ad.id, // Ensure UUID is mapped
                   headline1: ad.headline_1 || "",
                   headline2: ad.headline_2 || "",
                   headline3: ad.headline_3 || "",
