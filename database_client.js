@@ -399,6 +399,26 @@ class DatabaseClient {
         }
     }
 
+    async deleteAdGroup(adGroupId) {
+        try {
+            const response = await fetch(`${this.apiBaseUrl}/api/ad-groups/${adGroupId}`, {
+                method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+
+            if (!response.ok) {
+                throw new Error('Failed to delete ad group');
+            }
+
+            return true;
+        } catch (error) {
+            console.error('Error deleting ad group:', error);
+            throw error;
+        }
+    }
+
     // Keyword operations
     async saveKeywords(adGroupId, keywords) {
         try {
@@ -444,6 +464,26 @@ class DatabaseClient {
             return result.data;
         } catch (error) {
             console.error('Error creating ad:', error);
+            throw error;
+        }
+    }
+
+    async deleteAd(adId) {
+        try {
+            const response = await fetch(`${this.apiBaseUrl}/api/ads/${adId}`, {
+                method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+
+            if (!response.ok) {
+                throw new Error('Failed to delete ad');
+            }
+
+            return true;
+        } catch (error) {
+            console.error('Error deleting ad:', error);
             throw error;
         }
     }
@@ -501,23 +541,25 @@ class DatabaseClient {
 
                         // Convert ads
                         if (adGroup.ads) {
-                            campaignsData[campaignId].ads[adGroupId] = adGroup.ads.map(ad => ({
-                                headline1: ad.headline_1 || '',
-                                headline2: ad.headline_2 || '',
-                                headline3: ad.headline_3 || '',
-                                headline4: ad.headline_4 || '',
-                                headline5: ad.headline_5 || '',
-                                headline6: ad.headline_6 || '',
-                                headline7: ad.headline_7 || '',
-                                headline8: ad.headline_8 || '',
-                                headline9: ad.headline_9 || '',
-                                headline10: ad.headline_10 || '',
-                                headline11: ad.headline_11 || '',
-                                description1: ad.description_1 || '',
-                                description2: ad.description_2 || '',
-                                description3: ad.description_3 || '',
-                                description4: ad.description_4 || ''
-                            }));
+                            campaignsData[campaignId].ads[adGroupId] =
+                              adGroup.ads.map((ad) => ({
+                                id: ad.id, // Ensure UUID is mapped modified by Jimbolo
+                                headline1: ad.headline_1 || "",
+                                headline2: ad.headline_2 || "",
+                                headline3: ad.headline_3 || "",
+                                headline4: ad.headline_4 || "",
+                                headline5: ad.headline_5 || "",
+                                headline6: ad.headline_6 || "",
+                                headline7: ad.headline_7 || "",
+                                headline8: ad.headline_8 || "",
+                                headline9: ad.headline_9 || "",
+                                headline10: ad.headline_10 || "",
+                                headline11: ad.headline_11 || "",
+                                description1: ad.description_1 || "",
+                                description2: ad.description_2 || "",
+                                description3: ad.description_3 || "",
+                                description4: ad.description_4 || "",
+                              }));
                         }
                     });
                 }

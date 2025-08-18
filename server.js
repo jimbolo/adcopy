@@ -516,6 +516,29 @@ app.post('/api/ad-groups', async (req, res) => {
     }
 });
 
+app.delete('/api/ad-groups/:adGroupId', async (req, res) => {
+    try {
+        if (!databaseService) {
+            return res.status(503).json({
+                success: false,
+                message: 'Database service not available'
+            });
+        }
+
+        const { adGroupId } = req.params;
+        await databaseService.deleteAdGroup(adGroupId);
+        
+        res.json({
+            success: true,
+            message: 'Ad group deleted successfully'
+        });
+        
+    } catch (error) {
+        console.error('Error deleting ad group:', error);
+        handleError(error, res);
+    }
+});
+
 app.post('/api/keywords', async (req, res) => {
     try {
         if (!databaseService) {
@@ -572,6 +595,29 @@ app.post('/api/ads', async (req, res) => {
         
     } catch (error) {
         console.error('Error creating ad:', error);
+        handleError(error, res);
+    }
+});
+
+app.delete('/api/ads/:adId', async (req, res) => {
+    try {
+        if (!databaseService) {
+            return res.status(503).json({
+                success: false,
+                message: 'Database service not available'
+            });
+        }
+
+        const { adId } = req.params;
+        await databaseService.deleteAd(adId);
+        
+        res.json({
+            success: true,
+            message: 'Ad deleted successfully'
+        });
+        
+    } catch (error) {
+        console.error('Error deleting ad:', error);
         handleError(error, res);
     }
 });

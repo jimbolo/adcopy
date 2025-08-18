@@ -1,0 +1,6 @@
+@echo off
+echo Stopping any existing server on port 3000...
+npx kill-port 3000 2>nul
+timeout /t 2 /nobreak >nul
+echo Starting server with nodemon...
+npm run dev

@@ -5,7 +5,10 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "restart": "npx kill-port 3000 && npm run dev",
+    "stop": "npx kill-port 3000",
+    "clean-start": "npx kill-port 3000 && timeout /t 2 && npm run dev"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.50.2",

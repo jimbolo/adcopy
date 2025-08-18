@@ -1,0 +1,29 @@
+{
+  "watch": [
+    "server.js",
+    "database_client.js",
+    "database_service.js",
+    "openai_connector.js",
+    "semrush_connector.js",
+    "agentic_ad_copy_generator.js",
+    "ad_copy_generator.js",
+    "openai_config.js",
+    "error_handling.js",
+    ".env"
+  ],
+  "ext": "js,json,env",
+  "ignore": [
+    "node_modules/",
+    "*.log",
+    ".git/",
+    "dist/",
+    "build/"
+  ],
+  "delay": "1000",
+  "restartable": "rs",
+  "verbose": true,
+  "signal": "SIGTERM",
+  "env": {
+    "NODE_ENV": "development"
+  }
+}
