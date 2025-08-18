@@ -870,6 +870,23 @@
                             <button id="clear-selection-btn"
                                 style="background-color: #dc3545; color: white; margin-left: 10px;">Clear
                                 Selection</button>
+<<<<<<< HEAD
+=======
+                            <div class="form-group" style="margin-bottom: 20px;">
+                                <label for="intent-select"><strong>Keyword Intent:</strong></label>
+                                <select id="intent-select" style="margin-left: 10px;">
+                                    <option value="i">Informational</option>
+                                    <option value="n">Navigational</option>
+                                    <option value="t">Transactional</option>
+                                    <option value="c">Commercial</option>
+                                </select>
+                                <span style="margin-left: 10px; color: #888;">Select the desired intent for keyword generation.</span>
+                            </div>
+
+
+
+
+>>>>>>> 7d9cc8e327886a04faff6aa6a5c3de962f135e85
                         </div>
                         <div
                             style="overflow-x: auto; max-height: 500px; overflow-y: auto; border: 1px solid #ddd; border-radius: 4px;">
@@ -2293,6 +2310,13 @@
             const clearSelectionBtn = document.getElementById('clear-selection-btn');
             const selectAllCheckbox = document.getElementById('select-all-checkbox');
 
+<<<<<<< HEAD
+=======
+            // intent 
+            const intentSelect = document.getElementById('intent-select');
+            const selectedIntent = intentSelect.value;
+
+>>>>>>> 7d9cc8e327886a04faff6aa6a5c3de962f135e85
             saveSelectedKeywordsBtn.addEventListener('click', async () => {
                 const campaignId = keywordCampaignSelect.value;
                 const adGroupId = keywordAdGroupSelect.value;
