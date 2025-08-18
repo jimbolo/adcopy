@@ -497,31 +497,21 @@ Focus on extracting terms that would be valuable for finding relevant keywords i
         const parts = lines[i].split(";");
         console.log(`Line ${i} parts (${parts.length}):`, parts);
 
-
-
-
-
-
-
-
         // Accept 5 or more columns (trends column might be missing)
         if (parts.length >= 5) {
-          const intentValue = parts[5] || 'informational';
           const keyword = {
-            keyword: parts[0].replace(/"/g, ''),
+            keyword: parts[0].replace(/"/g, ""),
             searchVolume: parseInt(parts[1]) || 0,
             cpc: parseFloat(parts[2]) || 0,
             competition: parseFloat(parts[3]) || 0,
             results: parseInt(parts[4]) || 0,
-            intent: intentValue
+            intent: parts[5] || "informational", // Default if trends column missing
           };
-          // Only include transactional keywords
-          if (intentValue === '3' || intentValue.toLowerCase() === 'transactional') {
-            console.log('✅ Parsed keyword:', keyword);
-            keywords.push(keyword);
-          }
+
+          console.log("✅ Parsed keyword:", keyword);
+          keywords.push(keyword);
         } else {
-          console.log('❌ Skipping line with insufficient columns:', parts);
+          console.log("❌ Skipping line with insufficient columns:", parts);
         }
       }
 
@@ -533,11 +523,6 @@ Focus on extracting terms that would be valuable for finding relevant keywords i
       return [];
     }
   }
-
-
-
-
-  
 
   /**
    * Remove duplicate keywords

@@ -4,7 +4,12 @@
   "description": "A tool for building Google Ads campaigns with AI-powered ad copy generation",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "dev": "nodemon server.js",
+    "build": "npm install && echo 'AdCopy server dependencies installed and ready'",
+    "prestart": "echo 'Starting AdCopy server...'",
+    "stop": "taskkill /IM node.exe /F 2>nul || echo 'No Node.js processes to stop'",
+    "clean": "npm run stop && echo 'Server processes cleaned'"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.50.2",
