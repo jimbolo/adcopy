@@ -576,6 +576,31 @@ app.post('/api/keywords', async (req, res) => {
     }
 });
 
+app.delete('/api/keywords/:adGroupId', async (req, res) => {
+    try {
+        if (!databaseService) {
+            return res.status(503).json({
+                success: false,
+                message: 'Database service not available'
+            });
+        }
+
+        const { adGroupId } = req.params;
+        
+        // Delete all keywords for this ad group
+        await databaseService.deleteKeywordsByAdGroup(adGroupId);
+        
+        res.json({
+            success: true,
+            message: 'All keywords deleted successfully'
+        });
+        
+    } catch (error) {
+        console.error('Error deleting keywords:', error);
+        handleError(error, res);
+    }
+});
+
 app.post('/api/ads', async (req, res) => {
     try {
         if (!databaseService) {

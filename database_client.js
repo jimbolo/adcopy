@@ -445,6 +445,27 @@ class DatabaseClient {
         }
     }
 
+    async deleteAllKeywords(adGroupId) {
+        try {
+            const response = await fetch(`${this.apiBaseUrl}/api/keywords/${adGroupId}`, {
+                method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+
+            if (!response.ok) {
+                throw new Error('Failed to delete keywords');
+            }
+
+            const result = await response.json();
+            return result;
+        } catch (error) {
+            console.error('Error deleting keywords:', error);
+            throw error;
+        }
+    }
+
     // Ad operations
     async createAd(adData) {
         try {

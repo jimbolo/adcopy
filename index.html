@@ -946,6 +946,9 @@
                             <button id="save-keywords-to-db-btn"
                                 style="background-color: #1a73e8; color: white; display: none;">Save Keywords to
                                 Database</button>
+
+                            <button id="delete-keywords-to-db-btn" style="background-color: #ea4335; color: white; display: none; margin-left: 10px;">Delete All Keywords from
+                                Database</button>
                         </div>
                         <div id="keyword-list-container">
                             <div class="keyword-list">
@@ -2410,6 +2413,53 @@
                 }
             });
 
+            // Delete All Keywords from Database button
+            const deleteKeywordsToDbBtn = document.getElementById('delete-keywords-to-db-btn');
+            deleteKeywordsToDbBtn.addEventListener('click', async () => {
+                const campaignId = keywordCampaignSelect.value;
+                const adGroupId = keywordAdGroupSelect.value;
+
+                if (!campaignId || !adGroupId) {
+                    alert('Please select a campaign and ad group first.');
+                    return;
+                }
+
+                if (!databaseClient || !databaseClient.isSupabaseEnabled) {
+                    alert('Database connection is not available.');
+                    return;
+                }
+
+                const keywords = campaignsData[campaignId].keywords &&
+                    campaignsData[campaignId].keywords[adGroupId] ?
+                    campaignsData[campaignId].keywords[adGroupId] : [];
+
+                if (keywords.length === 0) {
+                    alert('No keywords to delete for this ad group.');
+                    return;
+                }
+
+                // Confirm before deletion
+                const confirmed = confirm(`Are you sure you want to delete all ${keywords.length} keywords from the database for this ad group? This action cannot be undone.`);
+                if (!confirmed) {
+                    return;
+                }
+
+                try {
+                    await databaseClient.deleteAllKeywords(adGroupId);
+                    
+                    // Clear keywords from local data
+                    campaignsData[campaignId].keywords[adGroupId] = [];
+                    
+                    // Update the UI
+                    updateKeywordList();
+                    
+                    alert('All keywords have been successfully deleted from the database!');
+                } catch (error) {
+                    console.error('Error deleting keywords from database:', error);
+                    alert(`Error deleting keywords from database: ${error.message}`);
+                }
+            });
+
             addKeywordsBtn.addEventListener('click', async () => {
                 const campaignId = keywordCampaignSelect.value;
                 const adGroupId = keywordAdGroupSelect.value;
@@ -2781,6 +2831,7 @@
             const campaignId = keywordCampaignSelect.value;
             const adGroupId = keywordAdGroupSelect.value;
             const saveKeywordsToDbBtn = document.getElementById('save-keywords-to-db-btn');
+            const deleteKeywordsToDbBtn = document.getElementById('delete-keywords-to-db-btn');
 
             if (!campaignId || !adGroupId) {
                 keywordListContainer.innerHTML = `
@@ -2789,6 +2840,7 @@
                     </div>
                 `;
                 if (saveKeywordsToDbBtn) saveKeywordsToDbBtn.style.display = 'none';
+                if (deleteKeywordsToDbBtn) deleteKeywordsToDbBtn.style.display = 'none';
                 return;
             }
 
@@ -2803,6 +2855,7 @@
                     </div>
                 `;
                 if (saveKeywordsToDbBtn) saveKeywordsToDbBtn.style.display = 'none';
+                if (deleteKeywordsToDbBtn) deleteKeywordsToDbBtn.style.display = 'none';
                 return;
             }
 
@@ -2846,13 +2899,15 @@
                 });
             });
 
-            // Show save button if there are keywords and Supabase is enabled
+            // Show/hide save and delete buttons based on keywords and Supabase status
+            const hasSupabaseAndKeywords = databaseClient && databaseClient.isSupabaseEnabled && keywords.length > 0;
+            
             if (saveKeywordsToDbBtn) {
-                if (databaseClient && databaseClient.isSupabaseEnabled && keywords.length > 0) {
-                    saveKeywordsToDbBtn.style.display = 'inline-block';
-                } else {
-                    saveKeywordsToDbBtn.style.display = 'none';
-                }
+                saveKeywordsToDbBtn.style.display = hasSupabaseAndKeywords ? 'inline-block' : 'none';
+            }
+            
+            if (deleteKeywordsToDbBtn) {
+                deleteKeywordsToDbBtn.style.display = hasSupabaseAndKeywords ? 'inline-block' : 'none';
             }
         }
 
@@ -3158,6 +3213,9 @@
                     await deleteAd(campaignId, adGroupId, adId);
                 });
             });
+
+            // Update keyword coverage analysis when ads list changes
+            updateKeywordCoverageAnalysis();
         }
 
         async function deleteAd(campaignId, adGroupId, index) {
@@ -3233,15 +3291,51 @@
         }
 
         function getCurrentAdCopy() {
+            const campaignId = adCampaignSelect.value;
+            const adGroupId = adGroupSelect.value;
+            
+            // Get current form input values
+            const currentHeadlines = [
+                headline1.value, headline2.value, headline3.value, headline4.value,
+                headline5.value, headline6.value, headline7.value, headline8.value,
+                headline9.value, headline10.value, headline11.value
+            ].filter(h => h.trim() !== '');
+            
+            const currentDescriptions = [
+                description1.value, description2.value, description3.value, description4.value
+            ].filter(d => d.trim() !== '');
+            
+            // Get saved ads for this ad group
+            const savedAds = getSavedAds(campaignId, adGroupId);
+            
+            // Combine current form data with saved ads data
+            const allHeadlines = [...currentHeadlines];
+            const allDescriptions = [...currentDescriptions];
+            
+            // Add headlines and descriptions from saved ads
+            savedAds.forEach((ad, adIndex) => {
+                const savedHeadlines = [
+                    ad.headline1, ad.headline2, ad.headline3, ad.headline4,
+                    ad.headline5, ad.headline6, ad.headline7, ad.headline8,
+                    ad.headline9, ad.headline10, ad.headline11
+                ].filter(h => h && h.trim() !== '');
+                
+                const savedDescriptions = [
+                    ad.description1, ad.description2, ad.description3, ad.description4
+                ].filter(d => d && d.trim() !== '');
+                
+                allHeadlines.push(...savedHeadlines);
+                allDescriptions.push(...savedDescriptions);
+            });
+            
             return {
-                headlines: [
-                    headline1.value, headline2.value, headline3.value, headline4.value,
-                    headline5.value, headline6.value, headline7.value, headline8.value,
-                    headline9.value, headline10.value, headline11.value
-                ].filter(h => h.trim() !== ''),
-                descriptions: [
-                    description1.value, description2.value, description3.value, description4.value
-                ].filter(d => d.trim() !== '')
+                headlines: allHeadlines,
+                descriptions: allDescriptions,
+                savedAds: savedAds,
+                currentForm: {
+                    headlines: currentHeadlines,
+                    descriptions: currentDescriptions
+                }
             };
         }
 
@@ -3254,38 +3348,75 @@
             return campaignsData[campaignId].keywords[adGroupId];
         }
 
+        function getSavedAds(campaignId, adGroupId) {
+            if (!campaignId || !adGroupId || !campaignsData[campaignId] || 
+                !campaignsData[campaignId].ads || !campaignsData[campaignId].ads[adGroupId]) {
+                return [];
+            }
+
+            return campaignsData[campaignId].ads[adGroupId];
+        }
+
+        // Helper function for proper phrase matching with word boundaries
+        function isPhraseInText(phrase, text) {
+            if (!phrase || !text) return false;
+            
+            // Convert both to lowercase for comparison
+            const lowerPhrase = phrase.toLowerCase().trim();
+            const lowerText = text.toLowerCase().trim();
+            
+            // For exact phrase matching, we need to be very strict
+            // The phrase should appear as complete words with word boundaries
+            const escapedPhrase = lowerPhrase.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+            const regex = new RegExp('\\b' + escapedPhrase + '\\b');
+            
+            return regex.test(lowerText);
+        }
+
         function analyzeKeywordCoverage(adCopy, keywords) {
-            const allAdText = [...adCopy.headlines, ...adCopy.descriptions].join(' ').toLowerCase();
+            const allAdText = [...adCopy.headlines, ...adCopy.descriptions].join(' ');
 
             let coveredCount = 0;
             let partialCount = 0;
             let missingCount = 0;
 
             const keywordDetails = keywords.map(keyword => {
-                const keywordText = keyword.text.toLowerCase();
-                const keywordWords = keywordText.split(' ');
+                const keywordText = keyword.text;
+                const keywordWords = keywordText.toLowerCase().split(' ');
 
-                // Check for exact keyword match
-                if (allAdText.includes(keywordText)) {
+                // Debug: Log what we're analyzing
+                console.log(`Analyzing keyword: "${keywordText}"`);
+                console.log(`All ad text: "${allAdText.substring(0, 200)}..."`);
+
+                // Check for exact phrase match using proper phrase matching
+                const exactMatch = isPhraseInText(keywordText, allAdText);
+                console.log(`Exact match for "${keywordText}": ${exactMatch}`);
+
+                if (exactMatch) {
                     coveredCount++;
                     return {
                         keyword: keyword.text,
                         matchType: keyword.matchType,
                         status: 'covered',
                         coverage: 100,
-                        foundIn: findKeywordInSections(keyword.text, adCopy)
+                        foundIn: findKeywordInSections(keyword.text, adCopy, false) // Explicit false for exact matching
                     };
                 }
 
-                // Check for partial match (individual words)
+                // Check for partial match (individual words with word boundaries)
                 let matchedWords = 0;
+                const foundWords = [];
                 keywordWords.forEach(word => {
-                    if (allAdText.includes(word.toLowerCase())) {
+                    const wordMatch = isPhraseInText(word, allAdText);
+                    console.log(`Word "${word}" match: ${wordMatch}`);
+                    if (wordMatch) {
                         matchedWords++;
+                        foundWords.push(word);
                     }
                 });
 
                 const coveragePercentage = Math.round((matchedWords / keywordWords.length) * 100);
+                console.log(`Coverage for "${keywordText}": ${coveragePercentage}% (${matchedWords}/${keywordWords.length})`);
 
                 if (coveragePercentage >= 50) {
                     partialCount++;
@@ -3294,7 +3425,7 @@
                         matchType: keyword.matchType,
                         status: 'partial',
                         coverage: coveragePercentage,
-                        foundIn: findKeywordInSections(keyword.text, adCopy)
+                        foundIn: findPartialKeywordInSections(foundWords, adCopy) // Use a separate function for partial matches
                     };
                 } else {
                     missingCount++;
@@ -3321,21 +3452,120 @@
             };
         }
 
-        function findKeywordInSections(keyword, adCopy) {
+        function findKeywordInSections(keyword, adCopy, isPartialMatch = false) {
             const foundIn = [];
-            const keywordLower = keyword.toLowerCase();
 
-            // Check headlines
-            adCopy.headlines.forEach((headline, index) => {
-                if (headline.toLowerCase().includes(keywordLower)) {
-                    foundIn.push(`Headline ${index + 1}`);
+            // For exact matches only
+            if (!isPartialMatch) {
+                // Check current form headlines first
+                adCopy.currentForm.headlines.forEach((headline, index) => {
+                    if (isPhraseInText(keyword, headline)) {
+                        foundIn.push(`Headline ${index + 1}`);
+                    }
+                });
+
+                // Check current form descriptions
+                adCopy.currentForm.descriptions.forEach((description, index) => {
+                    if (isPhraseInText(keyword, description)) {
+                        foundIn.push(`Description ${index + 1}`);
+                    }
+                });
+
+                // Check saved ads
+                if (adCopy.savedAds && adCopy.savedAds.length > 0) {
+                    adCopy.savedAds.forEach((ad, adIndex) => {
+                        // Check headlines in saved ads
+                        const savedHeadlines = [
+                            ad.headline1, ad.headline2, ad.headline3, ad.headline4,
+                            ad.headline5, ad.headline6, ad.headline7, ad.headline8,
+                            ad.headline9, ad.headline10, ad.headline11
+                        ];
+                        
+                        savedHeadlines.forEach((headline, headlineIndex) => {
+                            if (headline && isPhraseInText(keyword, headline)) {
+                                foundIn.push(`Saved Ad ${adIndex + 1} - Headline ${headlineIndex + 1}`);
+                            }
+                        });
+
+                        // Check descriptions in saved ads
+                        const savedDescriptions = [
+                            ad.description1, ad.description2, ad.description3, ad.description4
+                        ];
+                        
+                        savedDescriptions.forEach((description, descIndex) => {
+                            if (description && isPhraseInText(keyword, description)) {
+                                foundIn.push(`Saved Ad ${adIndex + 1} - Description ${descIndex + 1}`);
+                            }
+                        });
+                    });
                 }
-            });
+            }
 
-            // Check descriptions
-            adCopy.descriptions.forEach((description, index) => {
-                if (description.toLowerCase().includes(keywordLower)) {
-                    foundIn.push(`Description ${index + 1}`);
+            return foundIn;
+        }
+
+        function findPartialKeywordInSections(foundWords, adCopy) {
+            const foundIn = [];
+            const reportedWords = new Set(); // Prevent duplicates
+
+            foundWords.forEach(word => {
+                if (reportedWords.has(word)) return; // Skip if already reported
+
+                // Check current form headlines first
+                adCopy.currentForm.headlines.forEach((headline, index) => {
+                    if (isPhraseInText(word, headline) && !reportedWords.has(word)) {
+                        foundIn.push(`Headline ${index + 1} (${word})`);
+                        reportedWords.add(word);
+                        return; // Stop after first match for this word
+                    }
+                });
+
+                // Check current form descriptions (only if not found in headlines)
+                if (!reportedWords.has(word)) {
+                    adCopy.currentForm.descriptions.forEach((description, index) => {
+                        if (isPhraseInText(word, description) && !reportedWords.has(word)) {
+                            foundIn.push(`Description ${index + 1} (${word})`);
+                            reportedWords.add(word);
+                            return;
+                        }
+                    });
+                }
+
+                // Check saved ads (only if not found in current form)
+                if (!reportedWords.has(word) && adCopy.savedAds && adCopy.savedAds.length > 0) {
+                    adCopy.savedAds.forEach((ad, adIndex) => {
+                        if (reportedWords.has(word)) return; // Skip if already found
+
+                        // Check headlines in saved ads
+                        const savedHeadlines = [
+                            ad.headline1, ad.headline2, ad.headline3, ad.headline4,
+                            ad.headline5, ad.headline6, ad.headline7, ad.headline8,
+                            ad.headline9, ad.headline10, ad.headline11
+                        ];
+                        
+                        savedHeadlines.forEach((headline, headlineIndex) => {
+                            if (headline && isPhraseInText(word, headline) && !reportedWords.has(word)) {
+                                foundIn.push(`Saved Ad ${adIndex + 1} - Headline ${headlineIndex + 1} (${word})`);
+                                reportedWords.add(word);
+                                return;
+                            }
+                        });
+
+                        // Check descriptions in saved ads (only if not found in headlines)
+                        if (!reportedWords.has(word)) {
+                            const savedDescriptions = [
+                                ad.description1, ad.description2, ad.description3, ad.description4
+                            ];
+                            
+                            savedDescriptions.forEach((description, descIndex) => {
+                                if (description && isPhraseInText(word, description) && !reportedWords.has(word)) {
+                                    foundIn.push(`Saved Ad ${adIndex + 1} - Description ${descIndex + 1} (${word})`);
+                                    reportedWords.add(word);
+                                    return;
+                                }
+                            });
+                        }
+                    });
                 }
             });
 
